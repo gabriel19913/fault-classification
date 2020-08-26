@@ -1,10 +1,14 @@
-from matplotlib.pyplot import plot
 import numpy as np
 import pickle
 import matplotlib.pyplot as plt
 import matplotlib.style as style
 from sklearn.preprocessing import MultiLabelBinarizer
 import pandas as pd
+import time
+from jmespath import search
+from tqdm import tqdm, trange
+import functools
+import operator
 
 
 def add_noise(original_signal, snr):
@@ -141,8 +145,174 @@ def plot_data(sample, data, norm, noisy, save):
 
 
 def save_to_file(path, file_name, data):
-    with open(path + file_name, 'wb') as f:
+    with open(path + file_name + '.pkl', 'wb') as f:
         data = pickle.dump(data, f)
+
+
+# OBS: Somente as três últimas funções são utilizadas, as primeiras são apenas
+# funções auxiliares.
+
+def cum2Calc(vetMediaZero, nPoints, ii):
+    return np.matmul(vetMediaZero.T, np.roll(vetMediaZero, ii))/nPoints
+
+
+def cum3Calc(vetMediaZero, nPoints, ii):
+    return np.matmul(vetMediaZero.T, np.roll(vetMediaZero, ii)**2)/nPoints
+
+
+def cum4Calc(vetMediaZero, nPoints, ii):
+    sumOfSquares = np.dot(vetMediaZero.T, vetMediaZero)
+    part1 = np.matmul(vetMediaZero.T, np.roll(vetMediaZero, ii)**3)/nPoints
+    part2 = 3*np.matmul(vetMediaZero.T, np.roll(vetMediaZero, ii))*sumOfSquares/(nPoints**2)
+    return part1 - part2
+
+
+def cumCalc(vetEntrada, nEvents, order):
+    if (order == 2):
+        functionCalled = cum2Calc
+    elif (order == 3):
+        functionCalled = cum3Calc
+    elif (order == 4):
+        functionCalled = cum4Calc
+    else:
+        return None
+
+    # Transformando vetEntrada em um vetor coluna:
+    dimVet = vetEntrada.shape
+    if(dimVet[0] == nEvents):
+        vetEntrada = vetEntrada.T
+
+    nPoints = vetEntrada[:, 0].size  # number of points per column
+
+    # Pre - allocating space
+    cum = np.zeros([nEvents, nPoints])
+
+    for i in range(nEvents):
+        # Transformando vetEntrada em um vetor de média nula:
+        media = np.mean(vetEntrada[:,i])
+        vetMediaZero = vetEntrada[:,i] - media
+
+        for ii in range(nPoints):
+            cum[i, ii] = functionCalled(vetMediaZero, nPoints, ii)
+
+    return cum
+
+
+def cum2(vetEntrada, nEvents):
+    return cumCalc(vetEntrada, nEvents, 2)
+
+
+def cum3(vetEntrada, nEvents):
+    return cumCalc(vetEntrada, nEvents, 3)
+
+
+def cum4(vetEntrada, nEvents):
+    return cumCalc(vetEntrada, nEvents, 4)
+
+
+def apply_hos(data):
+    key_list = []
+    for key in data[0].keys():
+        if 'cycle' in key:
+            key_list.append([key + '.' + k for k in data[0]['cycle_1'].keys()])
+    key_list = functools.reduce(operator.iconcat, key_list, [])
+    timeStart = time.perf_counter()
+    types = search("[*].fault_type", data)
+    cum_data_dict = {}
+    for key in key_list:
+        print(f'Starting signal {key}.')
+        src = f"[*].{key}"
+        signal = search(src, data)
+
+        signal_a_list = []
+        signal_b_list = []
+        signal_c_list = []
+        signal_z_list = []
+        for item in signal:
+            signal_a_list.append(item[:, 0].reshape(1, -1))
+            signal_b_list.append(item[:, 1].reshape(1, -1))
+            signal_c_list.append(item[:, 2].reshape(1, -1))
+            signal_z_list.append(item[:, 3].reshape(1, -1))
+        signal_a = np.row_stack(signal_a_list)
+        signal_b = np.row_stack(signal_b_list)
+        signal_c = np.row_stack(signal_c_list)
+        signal_z = np.row_stack(signal_z_list)
+
+        fundCum2a = cum2(signal_a, 940)
+        fundCum3a = cum3(signal_a, 940)
+        fundCum4a = cum4(signal_a, 940)
+        fundCum2b = cum2(signal_b, 940)
+        fundCum3b = cum3(signal_b, 940)
+        fundCum4b = cum4(signal_b, 940)
+        fundCum2c = cum2(signal_c, 940)
+        fundCum3c = cum3(signal_c, 940)
+        fundCum4c = cum4(signal_c, 940)
+        fundCum2z = cum2(signal_z, 940)
+        fundCum3z = cum3(signal_z, 940)
+        fundCum4z = cum4(signal_z, 940)
+
+        new_key = '_'.join(src.split('.')[1:])
+        cum_dict = {new_key: {
+         'cum2': {
+             'A':
+                 pd.concat([pd.DataFrame(fundCum2a),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'B':
+                 pd.concat([pd.DataFrame(fundCum2b),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'C':
+                 pd.concat([pd.DataFrame(fundCum2c),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'Z':
+                 pd.concat([pd.DataFrame(fundCum2z),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             },
+         'cum3': {
+             'A':
+                 pd.concat([pd.DataFrame(fundCum3a),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'B':
+                 pd.concat([pd.DataFrame(fundCum3b),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'C':
+                 pd.concat([pd.DataFrame(fundCum3c),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'Z':
+                 pd.concat([pd.DataFrame(fundCum3z),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             },
+         'cum4': {
+             'A':
+                 pd.concat([pd.DataFrame(fundCum4a),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'B':
+                 pd.concat([pd.DataFrame(fundCum4b),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'C':
+                 pd.concat([pd.DataFrame(fundCum4c),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             'Z':
+                 pd.concat([pd.DataFrame(fundCum4z),
+                            pd.Series(types, name='fault_type'),
+                            pd.Series(types, name='fault_type_bin')], axis=1),
+             },
+         }
+        }
+        cum_data_dict.update(cum_dict)
+        print(f'Ending signal {key}.')
+    timeElapsed = time.perf_counter() - timeStart
+    return cum_data_dict, timeElapsed
 
 
 def preprocess(file_name, save_flag=False, plot_flag=False):
@@ -164,7 +334,8 @@ def preprocess(file_name, save_flag=False, plot_flag=False):
 
 if __name__ == "__main__":
     data_path = 'data/'
-    with open(data_path + 'noisy_data_without_pre.pkl', 'rb') as f:
+    with open(data_path + 'noisy_data.pkl', 'rb') as f:
         data = pickle.load(f)
-    print(len(data))
-    print(data[0]['cycle_16'].keys())
+    cum_data, time_elapsed = apply_hos(data)
+    save_to_file(data_path, 'noisy_data_cum', cum_data)
+    print(f'Time to apply higher order statistics: {time_elapsed}')
