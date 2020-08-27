@@ -334,8 +334,8 @@ def preprocess(file_name, save_flag=False, plot_flag=False):
 
 if __name__ == "__main__":
     data_path = 'data/'
-    with open(data_path + 'noisy_data.pkl', 'rb') as f:
+    with open(data_path + 'noisy_data_without_pre.pkl', 'rb') as f:
         data = pickle.load(f)
     cum_data, time_elapsed = apply_hos(data)
-    save_to_file(data_path, 'noisy_data_cum', cum_data)
+    save_to_file(data_path, 'noisy_data_without_pre_cum', cum_data)
     print(f'Time to apply higher order statistics: {time_elapsed}')
