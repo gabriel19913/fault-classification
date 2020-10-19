@@ -221,16 +221,30 @@ def add_noise(original_signal, snr):
     return noise_signal
 
 
+# def apply_noise(data, min=10, max=100, s='I'):
+#     final_data = []
+#     for i, v in enumerate(data):
+#         fault_dict = {'faultType': v['faultType'], f'{s}_pu': v[f'{s}_pu']}
+#         for snr in range(min, max + 10, 10):
+#             n0 = add_noise(v[f'{s}_pu'][:, 0], snr)
+#             n1 = add_noise(v[f'{s}_pu'][:, 1], snr)
+#             n2 = add_noise(v[f'{s}_pu'][:, 2], snr)
+#             noise_signal = np.vstack((n0, n1, n2)).T
+#             fault_dict.update({f'I_{str(snr)}db': noise_signal})
+#         final_data.append(fault_dict)
+#     return final_data
+
+
 def apply_noise(data, min=10, max=100, s='I'):
     final_data = []
     for i, v in enumerate(data):
-        fault_dict = {'faultType': v['faultType'], f'{s}_pu': v[f'{s}_pu']}
+        fault_dict = {'faultType': v['faultType'], 'pu': v[f'{s}_pu']}
         for snr in range(min, max + 10, 10):
             n0 = add_noise(v[f'{s}_pu'][:, 0], snr)
             n1 = add_noise(v[f'{s}_pu'][:, 1], snr)
             n2 = add_noise(v[f'{s}_pu'][:, 2], snr)
             noise_signal = np.vstack((n0, n1, n2)).T
-            fault_dict.update({f'I_{str(snr)}db': noise_signal})
+            fault_dict.update({f'{str(snr)}db': noise_signal})
         final_data.append(fault_dict)
     return final_data
 
@@ -266,8 +280,8 @@ def save_data(data, s, source='current'):
                 final = np.concatenate((signal, signal_z), axis=1)
                 final_signal = pd.DataFrame(final[:size, :],
                                             columns=['A', 'B', 'C', 'Z'])
-                cycle_path = f'cycle_{n}/'
-                snr_path = f'{key}/{source}/'
+                cycle_path = f'cycle_{n}/{source}/'
+                snr_path = f'{key}/'
                 full_path = noise_path + cycle_path + snr_path
                 if not os.path.exists(full_path):
                     os.makedirs(full_path)
@@ -297,3 +311,12 @@ def getListOfFiles(dirName):
         else:
             allFiles.append(fullPath)
     return allFiles
+
+
+def get_signal(cycle, noise):
+    noise_path = '../data/noise_signals/'
+    full_path = f'{noise_path}{cycle}/{noise}/'
+    samples = getListOfFiles(full_path)
+    for sample in samples:
+        data, fault = load_data(sample)
+        yield {'signal': data, 'fault': fault}

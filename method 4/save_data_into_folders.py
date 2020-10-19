@@ -8,6 +8,6 @@ model_path = 'models/'
 fig_path = 'figs/'
 
 data_list = data_list(data_path)
-noise_data = apply_noise(data_list, min=10, max=100, s='I')
+noise_data = apply_noise(data_list, min=10, max=100, s='V')
 for i in range(len(noise_data)):
-    save_data(noise_data[i], s=i, source='current')
+    save_data(noise_data[i], s=i, source='voltage')
