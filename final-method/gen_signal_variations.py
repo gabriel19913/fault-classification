@@ -35,13 +35,13 @@ if __name__ == "__main__":
             i_signalB = data['i_noise'][1,64:][:size]
             i_signalC = data['i_noise'][2,64:][:size]
             i_signalZ = data['i_noise'][3,64:][:size]
-            i_signal = normalize(np.hstack([i_signalA, i_signalB, i_signalC, i_signalZ]))
+            i_signal = np.hstack([i_signalA, i_signalB, i_signalC, i_signalZ])
 
             v_signalA = data['v_noise'][0,64:][:size]
             v_signalB = data['v_noise'][1,64:][:size]
             v_signalC = data['v_noise'][2,64:][:size]
             v_signalZ = data['v_noise'][3,64:][:size]
-            v_signal = normalize(np.hstack([v_signalA, v_signalB, v_signalC, v_signalZ]))
+            v_signal = np.hstack([v_signalA, v_signalB, v_signalC, v_signalZ])
             fault_dict.update({f'i_cycle_{n}': i_signal, f'v_cycle_{n}': v_signal})
         data_list.append(fault_dict)
     compressed_pickle(INPUT_DATA_PATH + 'cycle_data', data_list)
