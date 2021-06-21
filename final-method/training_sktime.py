@@ -1,14 +1,12 @@
 import numpy as np
 from sklearn.linear_model import RidgeClassifierCV
-from sklearn.pipeline import make_pipeline
-from sklearn.model_selection import train_test_split
 import pandas as pd
 from sktime.transformations.panel.rocket import Rocket, MiniRocketMultivariate
-from sklearn.model_selection import StratifiedKFold
 import pickle
 from glob import glob
 import time
 from noise import decompress_pickle
+import plotly.figure_factory as ff
 
 INPUT_DATA_PATH = '../input-data/'
 MODEL_PATH = './models/'
@@ -80,14 +78,16 @@ def evaluating_model(model, X_test, y_test, cycle, scores, count, model_name='mo
         pickle.dump(model, open(MODEL_PATH + f'{model_name}_{cycle}.pkl', 'wb'))
     return scores
 
-def print_results(scores, end_time, start_time):
+def print_results(cycle, model_name, scores, end_time, start_time):
     folds_labels = [f'Fold {i}' for i in range(1, 11)]
-    print(f'Acurácia em cada fold:')
+    f = open(f'{model_name}_report.txt','a')
+    title = generate_title(cycle, model_name)
+    print(f'\nAcurácia em cada fold usando {title}:', file=f)
     for k, v in dict(zip(folds_labels, np.round(scores * 100, decimals=2))).items():
-        print(f'{k:<7}: {v:^7}%')
-    print(f'\nMédia da acurácia: {np.mean(scores) * 100:.2f}%')
-    print(f'Desvio padrão da acurácia: {np.std(scores) * 100:.2f}%')
-    print(f'Tempo necessário para treinamento {int(np.round(end_time - start_time, 0))} segundos')
+        print(f'{k:<7}: {v:^7.2f}%', file=f)
+    print(f'\nMédia da acurácia: {np.mean(scores) * 100:.2f}%', file=f)
+    print(f'Desvio padrão da acurácia: {np.std(scores) * 100:.2f}%', file=f)
+    print(f'Tempo necessário para treinamento: {np.round(end_time - start_time, 3)} segundos', file=f)
 
 def kfold(train_X, train_y, test_X, test_y, max_list, model, cycle, model_name='',
           transformation=None):
@@ -111,15 +111,58 @@ def kfold(train_X, train_y, test_X, test_y, max_list, model, cycle, model_name='
 
     e = time.time()
     final_scores = np.array(scores)
-    print_results(final_scores, e, s)
+    print_results(cycle, model_name, final_scores, e, s)
 
 def validating(X_val, y_val, model_name, cycle):
+    s = time.time()
     with open(MODEL_PATH + f'{model_name}_{cycle}.pkl', 'rb') as f:
         best_model = pickle.load(f)
     val_score = best_model.score(X_val, y_val)
-    print('*' * 50)
-    print(f'Acurácia no conjunto de validação: {val_score * 100:.2f}%')
-    print('*' * 50)
+    y_pred = best_model.predict(X_val)
+    e = time.time()
+    f = open(f'{model_name}_report.txt','a')
+    print('*' * 73, file=f)
+    print(f'Acurácia no conjunto de validação: {val_score * 100:.2f}%', file=f)
+    print(f'Tempo necessário para predição do conjunto de validação: {np.round(e - s, 3)} segundos', file=f)
+    print('*' * 73,  file=f)
+    return y_pred
+
+def generate_confusion_matrix(y_val, y_pred, image_path, filename, title='', colorscale='blues',
+                              width=500, height=500):
+    data = {'Real':    y_val,
+            'Predito': y_pred}
+    df = pd.DataFrame(data, columns=['Real','Predito'])
+    confusion_matrix = pd.crosstab(df['Real'], df['Predito'], rownames=['Real'],
+                                   colnames=['Predito'], margins = True)
+    cm = confusion_matrix.drop('All', axis=1).drop('All', axis=0)
+
+    # Inverte rows because create_annotated_heatmap creates matrix in inverted order
+    c = cm.values[::-1]
+    x = list(cm.index)
+    y = x[::-1]
+    c_text = [[str(y) for y in x] for x in c]
+
+    fig = ff.create_annotated_heatmap(c, x=x, y=y, annotation_text=c_text, colorscale=colorscale)
+
+    # add title
+    fig.update_layout(title_text=f'<i><b>Matriz de Confusão {title}</b></i>',
+                      title_x=0.5, autosize=False, width=width, height=height,)
+
+    # add custom xaxis title
+    fig.add_annotation(dict(font=dict(color="black",size=14), x=0.5, y=-0.12, showarrow=False,
+                            text="Valores Preditos", xref="paper", yref="paper"))
+
+    fig.add_annotation(dict(font=dict(color="black",size=14), x=-0.2, y=0.5, textangle=270,
+                            showarrow=False, text="Valores Reais", xref="paper", yref="paper"))
+    fig.write_image(image_path + filename + '.svg')
+
+def generate_title(cycle, model_name):
+    title = cycle.split('_')[-1]
+    if title != '1':
+        title = f'{model_name.title()} e 1/{title} ciclo pós falta'
+    else:
+        title = f'{model_name.title()} e 1 ciclo pós falta'
+    return title
 
 def training(signal, cycle, model, model_name='', transformation=None):
     X_train = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal}/{cycle}/X_train')
@@ -142,12 +185,16 @@ def training(signal, cycle, model, model_name='', transformation=None):
     test_X = open_folds(cycle, 'test', 'X', signal)
     test_y = open_folds(cycle, 'test', 'y', signal)
     kfold(train_X, train_y, test_X, test_y, max_list, model, cycle, model_name, transformation)
-    validating(X_val_transform, y_val, model_name, cycle)
-
+    y_pred = validating(X_val_transform, y_val, model_name, cycle)
+    title = generate_title(cycle, model_name)
+    generate_confusion_matrix(y_val, y_pred, 'figs_cm/', f'{cycle}_{model_name}', title=title)
+    print(f'Finalizado treinamento para {title}!')
 
 if __name__ == '__main__':
-    num_features = 100
+    num_features = 1000
     transformation = MiniRocketMultivariate(num_features=num_features)
     model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
-    signal, cycle, model_name = 'i', 'cycle_1', 'minirocket'
-    training(signal, cycle, model, model_name, transformation)
+    signal, model_name = 'i', 'minirocket'
+    cycle_list = ['cycle_1', 'cycle_2', 'cycle_4', 'cycle_8', 'cycle_16', 'cycle_32']
+    for cycle in cycle_list:
+        training(signal, cycle, model, model_name, transformation)
