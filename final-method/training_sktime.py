@@ -191,7 +191,7 @@ def training(signal, cycle, model, model_name='', transformation=None):
     print(f'Finalizado treinamento para {title}!')
 
 if __name__ == '__main__':
-    num_features = 1000
+    num_features = 2000
     transformation = MiniRocketMultivariate(num_features=num_features)
     model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
     signal, model_name = 'i', 'minirocket'

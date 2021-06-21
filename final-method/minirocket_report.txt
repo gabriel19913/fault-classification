@@ -13,10 +13,10 @@ Fold 10: 100.00 %
 
 Média da acurácia: 100.00%
 Desvio padrão da acurácia: 0.00%
-Tempo necessário para treinamento: 20.939 segundos
+Tempo necessário para treinamento: 43.108 segundos
 *************************************************************************
 Acurácia no conjunto de validação: 100.00%
-Tempo necessário para predição do conjunto de validação: 0.078 segundos
+Tempo necessário para predição do conjunto de validação: 0.136 segundos
 *************************************************************************
 
 Acurácia em cada fold usando Minirocket e 1/2 ciclo pós falta:
@@ -33,15 +33,15 @@ Fold 10: 100.00 %
 
 Média da acurácia: 100.00%
 Desvio padrão da acurácia: 0.00%
-Tempo necessário para treinamento: 24.917 segundos
+Tempo necessário para treinamento: 42.334 segundos
 *************************************************************************
 Acurácia no conjunto de validação: 100.00%
-Tempo necessário para predição do conjunto de validação: 0.103 segundos
+Tempo necessário para predição do conjunto de validação: 0.12 segundos
 *************************************************************************
 
 Acurácia em cada fold usando Minirocket e 1/4 ciclo pós falta:
 Fold 1 : 100.00 %
-Fold 2 :  98.68 %
+Fold 2 : 100.00 %
 Fold 3 : 100.00 %
 Fold 4 : 100.00 %
 Fold 5 : 100.00 %
@@ -51,18 +51,18 @@ Fold 8 : 100.00 %
 Fold 9 : 100.00 %
 Fold 10: 100.00 %
 
-Média da acurácia: 99.87%
-Desvio padrão da acurácia: 0.39%
-Tempo necessário para treinamento: 21.981 segundos
+Média da acurácia: 100.00%
+Desvio padrão da acurácia: 0.00%
+Tempo necessário para treinamento: 29.732 segundos
 *************************************************************************
 Acurácia no conjunto de validação: 100.00%
-Tempo necessário para predição do conjunto de validação: 0.096 segundos
+Tempo necessário para predição do conjunto de validação: 0.109 segundos
 *************************************************************************
 
 Acurácia em cada fold usando Minirocket e 1/8 ciclo pós falta:
 Fold 1 : 100.00 %
 Fold 2 : 100.00 %
-Fold 3 :  97.33 %
+Fold 3 : 100.00 %
 Fold 4 : 100.00 %
 Fold 5 : 100.00 %
 Fold 6 : 100.00 %
@@ -71,12 +71,12 @@ Fold 8 : 100.00 %
 Fold 9 : 100.00 %
 Fold 10: 100.00 %
 
-Média da acurácia: 99.60%
-Desvio padrão da acurácia: 0.85%
-Tempo necessário para treinamento: 21.33 segundos
+Média da acurácia: 99.87%
+Desvio padrão da acurácia: 0.40%
+Tempo necessário para treinamento: 25.151 segundos
 *************************************************************************
 Acurácia no conjunto de validação: 99.47%
-Tempo necessário para predição do conjunto de validação: 0.083 segundos
+Tempo necessário para predição do conjunto de validação: 0.148 segundos
 *************************************************************************
 
 Acurácia em cada fold usando Minirocket e 1/16 ciclo pós falta:
@@ -84,37 +84,37 @@ Fold 1 :  98.68 %
 Fold 2 : 100.00 %
 Fold 3 : 100.00 %
 Fold 4 : 100.00 %
-Fold 5 :  98.67 %
+Fold 5 : 100.00 %
 Fold 6 : 100.00 %
 Fold 7 :  98.67 %
 Fold 8 : 100.00 %
 Fold 9 : 100.00 %
 Fold 10:  98.67 %
 
-Média da acurácia: 99.47%
-Desvio padrão da acurácia: 0.65%
-Tempo necessário para treinamento: 23.821 segundos
+Média da acurácia: 99.60%
+Desvio padrão da acurácia: 0.61%
+Tempo necessário para treinamento: 20.016 segundos
 *************************************************************************
 Acurácia no conjunto de validação: 100.00%
-Tempo necessário para predição do conjunto de validação: 0.078 segundos
+Tempo necessário para predição do conjunto de validação: 0.092 segundos
 *************************************************************************
 
 Acurácia em cada fold usando Minirocket e 1/32 ciclo pós falta:
 Fold 1 :  98.68 %
 Fold 2 : 100.00 %
-Fold 3 : 100.00 %
-Fold 4 : 100.00 %
-Fold 5 :  97.33 %
-Fold 6 :  98.67 %
+Fold 3 :  98.67 %
+Fold 4 :  98.67 %
+Fold 5 : 100.00 %
+Fold 6 : 100.00 %
 Fold 7 : 100.00 %
 Fold 8 : 100.00 %
-Fold 9 :  96.00 %
-Fold 10:  98.67 %
+Fold 9 :  98.67 %
+Fold 10: 100.00 %
 
-Média da acurácia: 98.94%
-Desvio padrão da acurácia: 1.31%
-Tempo necessário para treinamento: 18.055 segundos
+Média da acurácia: 99.47%
+Desvio padrão da acurácia: 0.65%
+Tempo necessário para treinamento: 18.697 segundos
 *************************************************************************
-Acurácia no conjunto de validação: 99.47%
-Tempo necessário para predição do conjunto de validação: 0.053 segundos
+Acurácia no conjunto de validação: 98.94%
+Tempo necessário para predição do conjunto de validação: 0.16 segundos
 *************************************************************************
