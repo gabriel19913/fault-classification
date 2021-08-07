@@ -29,7 +29,7 @@ if __name__ == "__main__":
                       'distance': data['distance'], 'angle': data['angle'],
                       'resistance': data['resistance'], 'v_noise': data['v_noise'],
                       'i_noise': data['i_noise']}
-        for n in drange(1, 33, 2):
+        for n in drange(1, 129, 2):
             size = int((data['i_noise'][0,64:].shape[0] - 64) / n + 64)
             i_signalA = data['i_noise'][0,64:][:size]
             i_signalB = data['i_noise'][1,64:][:size]
