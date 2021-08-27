@@ -1,6 +1,13 @@
 from training_sktime import RidgeClassifierCV, MiniRocketMultivariate, Rocket, np, training
 
-cycles = ['cycle_1', 'cycle_2', 'cycle_4', 'cycle_8', 'cycle_16', 'cycle_32']
+cycles = ['cycle_1', 'cycle_2', 'cycle_4', 'cycle_8', 'cycle_16', 'cycle_32', 'cycle_64',
+          'cycle_128']
+
+header = '|Ciclos pós falta| nº de features | Acurácia média de treinamento (%) | Acurácia de validação (%) | Tempo de treinamento (s) | Tempo de validação (s) |'
+sep = '\n|:---:|:---:|:---:|:---:|:---:|:---:|'
+with open("relatorio_automatizado_minirocket.md", 'w') as file:
+    file.write(header)
+    file.write(sep)
 
 print('# Treinamento do modelo usando MiniRocket')
 for cycle in cycles:
@@ -16,14 +23,27 @@ for cycle in cycles:
         print(f'\n### Treinando com {num_features} features', sep='')
         transformation = MiniRocketMultivariate(num_features=num_features, random_state=42)
         model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
-        training(signal, cycle, model, model_name, transformation, save=True)
+        mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
+        row = f'\n|{title.split(" ")[1]}|{num_features}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
+        # Appending to file
+        with open("relatorio_automatizado_minirocket.md", 'a') as file:
+            file.write(row)
     print(f'\n### Treinando com 10000 features (default)', sep='')
     transformation = MiniRocketMultivariate(random_state=42)
     model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
     signal, model_name = 'i', 'minirocket'
-    training(signal, cycle, model, model_name, transformation, save=True)
+    mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
+    row = f'\n|{title.split(" ")[1]}|10000|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
+    with open("relatorio_automatizado_minirocket.md", 'a') as file:
+        file.write(row)
 
 print('*' * 100)
+
+header = '|Ciclos pós falta| nº de features | Acurácia média de treinamento (%) | Acurácia de validação (%) | Tempo de treinamento (s) | Tempo de validação (s) |'
+sep = '\n|:---:|:---:|:---:|:---:|:---:|:---:|'
+with open("relatorio_automatizado_rocket.md", 'w') as file:
+    file.write(header)
+    file.write(sep)
 
 print('# Treinamento do modelo usando Rocket')
 for cycle in cycles:
@@ -39,14 +59,28 @@ for cycle in cycles:
         print(f'\n### Treinando com {num_kernels} kernels', sep='')
         transformation = Rocket(num_kernels=num_kernels, random_state=42)
         model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
-        training(signal, cycle, model, model_name, transformation, save=True)
+        mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
+        row = f'\n|{title.split(" ")[1]}|{num_features}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
+        # Appending to file
+        with open("relatorio_automatizado_rocket.md", 'a') as file:
+            file.write(row)
     print(f'\n### Treinando com 10000 kernels (default)', sep='')
     transformation = Rocket(random_state=42)
     model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
     signal, model_name = 'i', 'rocket'
-    training(signal, cycle, model, model_name, transformation, save=True)
+    mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
+    row = f'\n|{title.split(" ")[1]}|{num_features}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
+    # Appending to file
+    with open("relatorio_automatizado_rocket.md", 'a') as file:
+        file.write(row)
 
 print('*' * 100)
+
+header = '|Ciclos pós falta| nº de features | Acurácia média de treinamento (%) | Acurácia de validação (%) | Tempo de treinamento (s) | Tempo de validação (s) |'
+sep = '\n|:---:|:---:|:---:|:---:|:---:|:---:|'
+with open("relatorio_automatizado_rocket_todas_cpus.md", 'w') as file:
+    file.write(header)
+    file.write(sep)
 
 print('# Treinamento do modelo usando Rocket e todos cores da CPU')
 for cycle in cycles:
@@ -62,9 +96,17 @@ for cycle in cycles:
         print(f'\n### Treinando com {num_kernels} kernels', sep='')
         transformation = Rocket(num_kernels=num_kernels, random_state=42, n_jobs=-1)
         model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
-        training(signal, cycle, model, model_name, transformation, save=True)
+        mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
+        row = f'\n|{title.split(" ")[1]}|{num_features}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
+        # Appending to file
+        with open("relatorio_automatizado_rocket_todas_cpus.md", 'a') as file:
+            file.write(row)
     print(f'\n### Treinando com 10000 kernels (default)', sep='')
     transformation = Rocket(random_state=42, n_jobs=-1)
     model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
     signal, model_name = 'i', 'rocket'
-    training(signal, cycle, model, model_name, transformation, save=True)
+    mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
+    row = f'\n|{title.split(" ")[1]}|{num_features}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
+    # Appending to file
+    with open("relatorio_automatizado_rocket_todas_cpus.md", 'a') as file:
+        file.write(row)

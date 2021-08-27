@@ -14,7 +14,7 @@ MODEL_PATH = './models/'
 def open_folds(cycle, train_test, X_y, v_i):
     """
     Parameters:
-        cycle      : which cycle, ex.: 'cycle_1' (1, 2, 4, 8, 16, 32)
+        cycle      : which cycle, ex.: 'cycle_1' (1, 2, 4, 8, 16, 32, 64, 128...)
         train_test : if it is the train ot test set, ex: 'train' (train, test)
         X_y        : if it is the X or y set, ex.: 'X' (X, y)
         v_i        : if it is a voltage or current signal, ex.: 'i' (v, i)
@@ -74,9 +74,10 @@ def evaluating_model(model, X_test, y_test, cycle, scores, count, model_name='mo
     # Evaluating model
     score = model.score(X_test, y_test)
     scores.append(score)
-    if save:
-        if len(scores) != 1 and score > scores[count] or len(scores) == 1:
-            pickle.dump(model, open(MODEL_PATH + f'{model_name}_{cycle}.pkl', 'wb'))
+    if save and (
+        len(scores) != 1 and score > scores[count] or len(scores) == 1
+    ):
+        pickle.dump(model, open(MODEL_PATH + f'{model_name}_{cycle}.pkl', 'wb'))
     return scores
 
 def print_results(cycle, model_name, scores, end_time, start_time, save=None):
@@ -120,6 +121,7 @@ def kfold(train_X, train_y, test_X, test_y, max_list, model, cycle, model_name='
     e = time.time()
     final_scores = np.array(scores)
     print_results(cycle, model_name, final_scores, e, s, save)
+    return np.mean(scores) * 100, np.round(e - s, 3)
 
 def validating(X_val, y_val, model_name, cycle, save=None):
     s = time.time()
@@ -133,7 +135,7 @@ def validating(X_val, y_val, model_name, cycle, save=None):
     print(f'- Acurácia no conjunto de validação: {val_score * 100:.2f}%')
     print(f'- Tempo necessário para predição do conjunto de validação: {np.round(e - s, 3)} segundos')
     # print('*' * 73, file=f)
-    return y_pred
+    return y_pred, val_score * 100, np.round(e - s, 3)
 
 def generate_confusion_matrix(y_val, y_pred, image_path, filename, title='', colorscale='blues',
                               width=500, height=500):
@@ -192,11 +194,12 @@ def training(signal, cycle, model, model_name='', transformation=None, save=None
     train_y = open_folds(cycle, 'train', 'y', signal)
     test_X = open_folds(cycle, 'test', 'X', signal)
     test_y = open_folds(cycle, 'test', 'y', signal)
-    kfold(train_X, train_y, test_X, test_y, max_list, model, cycle, model_name, transformation, save)
-    y_pred = validating(X_val_transform, y_val, model_name, cycle, save)
+    mean_acc, train_time = kfold(train_X, train_y, test_X, test_y, max_list, model, cycle, model_name, transformation, save)
+    y_pred, val_acc, val_time = validating(X_val_transform, y_val, model_name, cycle, save)
     title = generate_title(cycle, model_name)
     generate_confusion_matrix(y_val, y_pred, 'figs_cm/', f'{cycle}_{model_name}', title=title)
     # print(f'Finalizado treinamento para {title}!')
+    return mean_acc, val_acc, train_time, val_time
 
 # if __name__ == '__main__':
 #     num_features = 2000
