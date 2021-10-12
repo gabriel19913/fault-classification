@@ -35,7 +35,7 @@ def convert_label(label):
 # Pickle a file and then compress it into a file with extension 
 def compressed_pickle(title, data):
     with bz2.BZ2File(title + '.pbz2', 'wb') as f: 
-        cPickle.dump(data, f, protocol = 5)
+        cPickle.dump(data, f, protocol = 4)
 
 def decompress_pickle(file):
     with bz2.BZ2File(file + '.pbz2', 'rb') as f: 

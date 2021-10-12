@@ -92,7 +92,7 @@ def print_results(cycle, model_name, scores, end_time, start_time, save=None):
     # print(f'\nMédia da acurácia: {np.mean(scores) * 100:.2f}%', file=f)
     # print(f'Desvio padrão da acurácia: {np.std(scores) * 100:.2f}%', file=f)
     # print(f'Tempo necessário para treinamento: {np.round(end_time - start_time, 3)} segundos', file=f)
-    print(f'\nAcurácia em cada fold:\n')
+    print('\nAcurácia em cada fold:\n')
     for k, v in dict(zip(folds_labels, np.round(scores * 100, decimals=2))).items():
         print(f'{k:<7}: {v:^7.2f}%')
     print('\nO resulto final obtido foi:\n')
