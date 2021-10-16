@@ -1,11 +1,11 @@
-from training_sktime import RidgeClassifierCV, MiniRocketMultivariate, Rocket, np, training
+from training_sktime_robson import RidgeClassifierCV, MiniRocketMultivariate, Rocket, np, training
 
 cycles = ['cycle_1', 'cycle_2', 'cycle_4', 'cycle_8', 'cycle_16', 'cycle_32', 'cycle_64',
           'cycle_128']
 
 header = '|Ciclos pós falta| nº de features | Acurácia média de treinamento (%) | Acurácia de validação (%) | Tempo de treinamento (s) | Tempo de validação (s) |'
 sep = '\n|:---:|:---:|:---:|:---:|:---:|:---:|'
-with open("relatorio_automatizado_minirocket.md", 'w') as file:
+with open("new_dataset_relatorio_automatizado_minirocket.md", 'w') as file:
     file.write(header)
     file.write(sep)
 
@@ -26,7 +26,7 @@ for cycle in cycles:
         mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
         row = f'\n|{title.split(" ")[1]}|{num_features}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
         # Appending to file
-        with open("relatorio_automatizado_minirocket.md", 'a') as file:
+        with open("new_dataset_relatorio_automatizado_minirocket.md", 'a') as file:
             file.write(row)
     print('\n### Treinando com 10000 features (default)', sep='')
     transformation = MiniRocketMultivariate(random_state=42)
@@ -34,14 +34,14 @@ for cycle in cycles:
     signal, model_name = 'i', 'minirocket'
     mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
     row = f'\n|{title.split(" ")[1]}|10000|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
-    with open("relatorio_automatizado_minirocket.md", 'a') as file:
+    with open("new_dataset_relatorio_automatizado_minirocket.md", 'a') as file:
         file.write(row)
 
 print('*' * 100)
 
 header = '|Ciclos pós falta| nº de features | Acurácia média de treinamento (%) | Acurácia de validação (%) | Tempo de treinamento (s) | Tempo de validação (s) |'
 sep = '\n|:---:|:---:|:---:|:---:|:---:|:---:|'
-with open("relatorio_automatizado_rocket.md", 'w') as file:
+with open("new_dataset_relatorio_automatizado_rocket.md", 'w') as file:
     file.write(header)
     file.write(sep)
 
@@ -62,7 +62,7 @@ for cycle in cycles:
         mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
         row = f'\n|{title.split(" ")[1]}|{num_kernels}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
         # Appending to file
-        with open("relatorio_automatizado_rocket.md", 'a') as file:
+        with open("new_dataset_relatorio_automatizado_rocket.md", 'a') as file:
             file.write(row)
     print('\n### Treinando com 10000 kernels (default)', sep='')
     transformation = Rocket(random_state=42)
@@ -71,7 +71,7 @@ for cycle in cycles:
     mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
     row = f'\n|{title.split(" ")[1]}|{num_kernels}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
     # Appending to file
-    with open("relatorio_automatizado_rocket.md", 'a') as file:
+    with open("new_dataset_relatorio_automatizado_rocket.md", 'a') as file:
         file.write(row)
 
 print('*' * 100)
