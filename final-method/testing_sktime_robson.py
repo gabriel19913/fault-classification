@@ -69,7 +69,7 @@ for cycle in cycles:
     model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
     signal, model_name = 'i', 'rocket'
     mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name, transformation, save=True)
-    row = f'\n|{title.split(" ")[1]}|{num_kernels}|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
+    row = f'\n|{title.split(" ")[1]}|10000|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
     # Appending to file
     with open("new_dataset_relatorio_automatizado_rocket.md", 'a') as file:
         file.write(row)
