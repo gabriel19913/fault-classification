@@ -182,7 +182,6 @@ def training(signal, cycle, model, model_name='', transformation=None, save=None
     y_val = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal}/{cycle}/y_val')
 
     max_list = find_max_value(X_train)
-    print(max_list)
     X_train_norm = normalizing(X_train, max_list)
     X_val_norm = normalizing(X_val, max_list)
     
