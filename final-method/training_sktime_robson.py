@@ -127,7 +127,8 @@ def kfold(train_X, train_y, test_X, test_y, model, cycle, max_list, model_name='
             X_te_transform = X_te_norm.copy()
 
         model.fit(X_tr_transform, y_tr)
-        scores = evaluating_model(model, transformation, X_te_transform, y_te, cycle, scores, count, max_list, model_name, save)
+        scores = evaluating_model(model, transformation, X_te_transform, y_te, cycle, scores,
+                                  count, max_list, model_name, save)
 
     e = time.time()
     final_scores = np.array(scores)
@@ -229,19 +230,17 @@ def training(signal, cycle, model, model_name='', transformation=None, save=None
 #     training(signal, cycle, model, model_name, transformation, save=True)
 
 if __name__ == "__main__":
-    # train_X = open_folds('cycle_1', 'train', 'X', 'i')
-    # train_y = open_folds('cycle_1', 'train', 'y', 'i')
-    # test_X = open_folds('cycle_1', 'test', 'X', 'i')
-    # test_y = open_folds('cycle_1', 'test', 'y', 'i')
-
-    X_train_flavio = decompress_pickle(INPUT_DATA_PATH + 'folds/i/cycle_1/X_train')
-    X_val_flavio = decompress_pickle(INPUT_DATA_PATH + 'folds/i/cycle_1/X_val')
-    y_val_flavio = decompress_pickle(INPUT_DATA_PATH + 'folds/i/cycle_1/y_val')
-
-    X_train_robson = decompress_pickle(INPUT_DATA_PATH + 'folds-robson/i/cycle_1/X_train')
-    X_val_robson = decompress_pickle(INPUT_DATA_PATH + 'folds-robson/i/cycle_1/X_val')
-    y_val_robson = decompress_pickle(INPUT_DATA_PATH + 'folds-robson/i/cycle_1/y_val')
-
-    X_train = pd.concat([X_train_flavio, X_train_robson]).reset_index(drop=True)
-    X_val = pd.concat([X_val_flavio, X_val_robson]).reset_index(drop=True)
-    y_val = np.concatenate([y_val_flavio, y_val_robson])
+    print('\n### Treinando com 10000 features (default)', sep='')
+    transformation = MiniRocketMultivariate(random_state=42)
+    model = RidgeClassifierCV(alphas=np.logspace(-3, 3, 10), normalize=True)
+    signal, model_name = 'i', 'minirocket'
+    for cycle in ['cycle_32', 'cycle_64', 'cycle_128']:
+        print('\n---')
+        c = cycle.split('_')[-1]
+        if c == '1':
+            title = f'\n## {c} Ciclo Pós Falta'
+        else:
+            title = f'\n## 1/{c} Ciclo Pós Falta'
+        mean_acc, val_acc, train_time, val_time = training(signal, cycle, model, model_name,
+                                                           transformation, save=False)
+        row = f'\n|{title.split(" ")[1]}|10000|{mean_acc:.2f}|{val_acc:.2f}|{train_time}|{val_time}|'
