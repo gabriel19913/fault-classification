@@ -11,10 +11,11 @@ from functools import partial
 from scipy import signal as sig
 import matplotlib.pyplot as plt
 import pandas as pd
+import plotly.figure_factory as ff
 
 
 INPUT_DATA_PATH = '../input-data/'
-MODEL_PATH = './models/'
+MODEL_PATH = './models_rf_new/'
 
 def param_optimization(X, y, model, grid, n_iter=50, cv=5):
     rf_random = RandomizedSearchCV(estimator=model, param_distributions=grid,
@@ -30,25 +31,26 @@ def transform_tabular_data(data, is_list=False):
     else:
         return t.fit_transform(data)
 
-def evaluating_model(model, X_test, y_test, cycle, scores, count, max_list, model_name='model', save=None):
+def evaluating_model(model, X_test, y_test, cycle, scores, count, max_list, signal_type='',
+                     model_name='model', save=None):
     # Evaluating model
     score = model.score(X_test, y_test)
     scores.append(score)
     if save and (
         len(scores) != 1 and score > scores[count] or len(scores) == 1
     ):
-        pickle.dump(model, open(MODEL_PATH + f'{model_name}_classifier_{cycle}.pkl', 'wb'))
-        pickle.dump(max_list, open(MODEL_PATH + f'{model_name}_{cycle}_max_values.pkl', 'wb'))
+        pickle.dump(model, open(MODEL_PATH + f'{signal_type}_{model_name}_classifier_{cycle}.pkl', 'wb'))
+        pickle.dump(max_list, open(MODEL_PATH + f'{signal_type}_{model_name}_{cycle}_max_values.pkl', 'wb'))
     return scores
 
-def kfold(train_X, train_y, test_X, test_y, model, cycle, max_list, model_name='', save=None):
+def kfold(train_X, train_y, test_X, test_y, model, cycle, max_list, signal_type, model_name='', save=None):
     scores = []
     s = time.time()
     for count, (X_tr, y_tr, X_te, y_te) in enumerate(zip(train_X, train_y, test_X, test_y),
                                                      start=-1):
         model.fit(X_tr, y_tr)
         scores = evaluating_model(model, X_te, y_te, cycle, scores,
-                                  count, max_list, model_name, save)
+                                  count, max_list, signal_type, model_name, save)
     e = time.time()
     final_scores = np.array(scores)
     print_results(cycle, model_name, final_scores, e, s, save)
@@ -108,24 +110,62 @@ def apply_notch(notch_filter, data, index):
         samples.append(sample)
     return pd.DataFrame(samples)
 
-def validating(X_val, y_val, model, model_name, save=None):
+def validating(X_val, y_val, model, model_name, signal_type='', save=None):
     s = time.time()
     # with open(MODEL_PATH + f'{model_name}_classifier_{cycle}.pkl', 'rb') as f:
     #     best_model = pickle.load(f)
     val_score = model.score(X_val, y_val)
     y_pred = model.predict(X_val)
     e = time.time()
-    f = open(f'{model_name}_report.txt','a') if save else save
+    f = open(f'{signal_type}_{model_name}_report.txt','a') if save else save
     print(f'- Acurácia no conjunto de validação: {val_score * 100:.2f}%')
     print(f'- Tempo necessário para predição do conjunto de validação: {np.round(e - s, 3)} segundos')
     return y_pred, val_score * 100, np.round(e - s, 3)
+
+def generate_confusion_matrix(y_val, y_pred, image_path, filename, title='', colorscale='blues',
+                              width=500, height=500):
+    data = {'Real':    y_val,
+            'Predito': y_pred}
+    df = pd.DataFrame(data, columns=['Real','Predito'])
+    confusion_matrix = pd.crosstab(df['Real'], df['Predito'], rownames=['Real'],
+                                   colnames=['Predito'], margins = True)
+    cm = confusion_matrix.drop('All', axis=1).drop('All', axis=0)
+
+    # Inverte rows because create_annotated_heatmap creates matrix in inverted order
+    c = cm.values[::-1]
+    x = list(cm.index)
+    y = x[::-1]
+    c_text = [[str(y) for y in x] for x in c]
+
+    fig = ff.create_annotated_heatmap(c, x=x, y=y, annotation_text=c_text, colorscale=colorscale)
+
+    # add title
+    fig.update_layout(title_text=f'<i><b>Matriz de Confusão {title}</b></i>',
+                      title_x=0.5, autosize=False, width=width, height=height,)
+
+    # add custom xaxis title
+    fig.add_annotation(dict(font=dict(color="black",size=14), x=0.5, y=-0.12, showarrow=False,
+                            text="Valores Preditos", xref="paper", yref="paper"))
+
+    fig.add_annotation(dict(font=dict(color="black",size=14), x=-0.2, y=0.5, textangle=270,
+                            showarrow=False, text="Valores Reais", xref="paper", yref="paper"))
+    fig.write_image(image_path + filename + '.svg')
+
+def generate_title(cycle, model_name):
+    title = cycle.split('_')[-1]
+    if title != '1':
+        title = f'{model_name.title()} e 1/{title} ciclo pós falta'
+    else:
+        title = f'{model_name.title()} e 1 ciclo pós falta'
+    return title
+
 
 if __name__ == '__main__':
     INPUT_DATA_PATH = '../input-data/'
 
     cycles = ['cycle_1', 'cycle_2', 'cycle_4', 'cycle_8', 'cycle_16', 'cycle_32', 'cycle_64',
               'cycle_128']
-    signal, model_name = 'i', 'random_forest'
+    signal_type, model_name = 'i', 'random_forest'
 
     for cycle in cycles:
         print('\n---')
@@ -135,20 +175,20 @@ if __name__ == '__main__':
         else:
             title = f'\n## 1/{c} Ciclo Pós Falta'
         print(title)
-        train_X = open_folds(cycle, 'train', 'X', signal)
-        train_y = open_folds(cycle, 'train', 'y', signal)
-        test_X = open_folds(cycle, 'test', 'X', signal)
-        test_y = open_folds(cycle, 'test', 'y', signal)
+        train_X = open_folds(cycle, 'train', 'X', signal_type)
+        train_y = open_folds(cycle, 'train', 'y', signal_type)
+        test_X = open_folds(cycle, 'test', 'X', signal_type)
+        test_y = open_folds(cycle, 'test', 'y', signal_type)
 
-        X_train_flavio = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal}/{cycle}/X_train')
-        y_train_flavio = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal}/{cycle}/y_train')
-        X_val_flavio = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal}/{cycle}/X_val')
-        y_val_flavio = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal}/{cycle}/y_val')
+        X_train_flavio = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal_type}/{cycle}/X_train')
+        y_train_flavio = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal_type}/{cycle}/y_train')
+        X_val_flavio = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal_type}/{cycle}/X_val')
+        y_val_flavio = decompress_pickle(INPUT_DATA_PATH + f'folds/{signal_type}/{cycle}/y_val')
         
-        X_train_robson = decompress_pickle(INPUT_DATA_PATH + f'folds-robson/{signal}/{cycle}/X_train')
-        y_train_robson = decompress_pickle(INPUT_DATA_PATH + f'folds-robson/{signal}/{cycle}/y_train')
-        X_val_robson = decompress_pickle(INPUT_DATA_PATH + f'folds-robson/{signal}/{cycle}/X_val')
-        y_val_robson = decompress_pickle(INPUT_DATA_PATH + f'folds-robson/{signal}/{cycle}/y_val')
+        X_train_robson = decompress_pickle(INPUT_DATA_PATH + f'folds-robson/{signal_type}/{cycle}/X_train')
+        y_train_robson = decompress_pickle(INPUT_DATA_PATH + f'folds-robson/{signal_type}/{cycle}/y_train')
+        X_val_robson = decompress_pickle(INPUT_DATA_PATH + f'folds-robson/{signal_type}/{cycle}/X_val')
+        y_val_robson = decompress_pickle(INPUT_DATA_PATH + f'folds-robson/{signal_type}/{cycle}/y_val')
 
         X_train = pd.concat([X_train_flavio, X_train_robson]).reset_index(drop=True)
         X_val = pd.concat([X_val_flavio, X_val_robson]).reset_index(drop=True)
@@ -185,6 +225,12 @@ if __name__ == '__main__':
             samples_df = apply_notch(notch_filter, data_X, index)
             new_test_X.append(samples_df)
 
-        scores = kfold(new_train_X, train_y, new_test_X, test_y, model, cycle, max_list,
-                       model_name=model_name, save=False)
-        y_pred, val_acc, val_time = validating(X_val_norm, y_val, model, model_name, save=False)
+        # scores = kfold(new_train_X, train_y, new_test_X, test_y, model, cycle, max_list,
+        #                model_name=model_name, save=False)
+        # y_pred, val_acc, val_time = validating(X_val_norm, y_val, model, model_name, save=False)
+        
+        scores = kfold(new_train_X, train_y, new_test_X, test_y, model, cycle, max_list, signal_type,
+                    model_name=model_name, save=True)
+        y_pred, val_acc, val_time = validating(X_val_norm, y_val, model, model_name, signal_type, save=True)
+        title = generate_title(cycle, model_name)
+        generate_confusion_matrix(y_val, y_pred, 'figs_cm_rf_new/', f'{signal_type}_{cycle}_{model_name}', title=title)

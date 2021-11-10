@@ -3,4 +3,6 @@
 *__pycahce__/
 *data/
 *models/
+*models_rf/
+*models_rf_new/
 *.ipynb_checkpoints/
