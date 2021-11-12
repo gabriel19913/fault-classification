@@ -1,4 +1,4 @@
-# Treinamento do modelo usando Rocket
+# Treinamento do modelo usando Rocket dataset 2
 
 ---
 
@@ -23,9 +23,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.20%
 - Desvio padrão da acurácia: 0.58%
-- Tempo necessário para treinamento: 27.429 segundos
+- Tempo necessário para treinamento: 26.397 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.014 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 200 kernels
 
@@ -46,7 +46,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.73%
 - Desvio padrão da acurácia: 0.33%
-- Tempo necessário para treinamento: 45.593 segundos
+- Tempo necessário para treinamento: 44.406 segundos
 - Acurácia no conjunto de validação: 100.00%
 - Tempo necessário para predição do conjunto de validação: 0.023 segundos
 
@@ -69,9 +69,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.73%
 - Desvio padrão da acurácia: 0.80%
-- Tempo necessário para treinamento: 62.682 segundos
+- Tempo necessário para treinamento: 60.936 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.044 segundos
+- Tempo necessário para predição do conjunto de validação: 0.048 segundos
 
 ### Treinando com 400 kernels
 
@@ -92,9 +92,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.80%
 - Desvio padrão da acurácia: 0.60%
-- Tempo necessário para treinamento: 85.491 segundos
+- Tempo necessário para treinamento: 83.206 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.051 segundos
+- Tempo necessário para predição do conjunto de validação: 0.059 segundos
 
 ### Treinando com 500 kernels
 
@@ -115,9 +115,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.93%
 - Desvio padrão da acurácia: 0.20%
-- Tempo necessário para treinamento: 103.437 segundos
+- Tempo necessário para treinamento: 99.74 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.063 segundos
+- Tempo necessário para predição do conjunto de validação: 0.072 segundos
 
 ### Treinando com 600 kernels
 
@@ -138,7 +138,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 122.341 segundos
+- Tempo necessário para treinamento: 118.785 segundos
 - Acurácia no conjunto de validação: 100.00%
 - Tempo necessário para predição do conjunto de validação: 0.077 segundos
 
@@ -161,9 +161,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 140.193 segundos
+- Tempo necessário para treinamento: 135.407 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.086 segundos
+- Tempo necessário para predição do conjunto de validação: 0.081 segundos
 
 ### Treinando com 800 kernels
 
@@ -184,9 +184,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.93%
 - Desvio padrão da acurácia: 0.20%
-- Tempo necessário para treinamento: 152.837 segundos
+- Tempo necessário para treinamento: 148.55 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.086 segundos
+- Tempo necessário para predição do conjunto de validação: 0.103 segundos
 
 ### Treinando com 900 kernels
 
@@ -207,9 +207,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 178.035 segundos
+- Tempo necessário para treinamento: 172.077 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.103 segundos
+- Tempo necessário para predição do conjunto de validação: 0.095 segundos
 
 ### Treinando com 1000 kernels
 
@@ -230,9 +230,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.80%
 - Desvio padrão da acurácia: 0.60%
-- Tempo necessário para treinamento: 187.812 segundos
+- Tempo necessário para treinamento: 182.354 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.117 segundos
+- Tempo necessário para predição do conjunto de validação: 0.11 segundos
 
 ### Treinando com 10000 kernels (default)
 
@@ -253,9 +253,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 1687.079 segundos
+- Tempo necessário para treinamento: 1631.492 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.519 segundos
+- Tempo necessário para predição do conjunto de validação: 0.505 segundos
 
 ---
 
@@ -280,9 +280,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.00%
 - Desvio padrão da acurácia: 1.12%
-- Tempo necessário para treinamento: 20.159 segundos
+- Tempo necessário para treinamento: 20.074 segundos
 - Acurácia no conjunto de validação: 98.40%
-- Tempo necessário para predição do conjunto de validação: 0.02 segundos
+- Tempo necessário para predição do conjunto de validação: 0.015 segundos
 
 ### Treinando com 200 kernels
 
@@ -303,9 +303,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.93%
 - Desvio padrão da acurácia: 0.61%
-- Tempo necessário para treinamento: 32.328 segundos
+- Tempo necessário para treinamento: 31.405 segundos
 - Acurácia no conjunto de validação: 99.73%
-- Tempo necessário para predição do conjunto de validação: 0.034 segundos
+- Tempo necessário para predição do conjunto de validação: 0.023 segundos
 
 ### Treinando com 300 kernels
 
@@ -326,9 +326,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.40%
 - Desvio padrão da acurácia: 0.55%
-- Tempo necessário para treinamento: 42.94 segundos
+- Tempo necessário para treinamento: 42.021 segundos
 - Acurácia no conjunto de validação: 99.73%
-- Tempo necessário para predição do conjunto de validação: 0.055 segundos
+- Tempo necessário para predição do conjunto de validação: 0.045 segundos
 
 ### Treinando com 400 kernels
 
@@ -349,9 +349,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.47%
 - Desvio padrão da acurácia: 0.83%
-- Tempo necessário para treinamento: 58.409 segundos
+- Tempo necessário para treinamento: 56.53 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.044 segundos
+- Tempo necessário para predição do conjunto de validação: 0.051 segundos
 
 ### Treinando com 500 kernels
 
@@ -372,9 +372,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.67%
 - Desvio padrão da acurácia: 0.45%
-- Tempo necessário para treinamento: 69.518 segundos
+- Tempo necessário para treinamento: 67.617 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.053 segundos
+- Tempo necessário para predição do conjunto de validação: 0.073 segundos
 
 ### Treinando com 600 kernels
 
@@ -395,9 +395,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.73%
 - Desvio padrão da acurácia: 0.44%
-- Tempo necessário para treinamento: 83.34 segundos
+- Tempo necessário para treinamento: 80.652 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.084 segundos
+- Tempo necessário para predição do conjunto de validação: 0.076 segundos
 
 ### Treinando com 700 kernels
 
@@ -418,9 +418,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.53%
 - Desvio padrão da acurácia: 0.52%
-- Tempo necessário para treinamento: 91.968 segundos
+- Tempo necessário para treinamento: 89.035 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.091 segundos
+- Tempo necessário para predição do conjunto de validação: 0.079 segundos
 
 ### Treinando com 800 kernels
 
@@ -441,9 +441,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.67%
 - Desvio padrão da acurácia: 0.54%
-- Tempo necessário para treinamento: 100.4 segundos
+- Tempo necessário para treinamento: 97.305 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.096 segundos
+- Tempo necessário para predição do conjunto de validação: 0.103 segundos
 
 ### Treinando com 900 kernels
 
@@ -464,9 +464,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 114.109 segundos
+- Tempo necessário para treinamento: 111.068 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.093 segundos
+- Tempo necessário para predição do conjunto de validação: 0.113 segundos
 
 ### Treinando com 1000 kernels
 
@@ -487,9 +487,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.73%
 - Desvio padrão da acurácia: 0.44%
-- Tempo necessário para treinamento: 121.293 segundos
+- Tempo necessário para treinamento: 117.311 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.104 segundos
+- Tempo necessário para predição do conjunto de validação: 0.111 segundos
 
 ### Treinando com 10000 kernels (default)
 
@@ -510,9 +510,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.93%
 - Desvio padrão da acurácia: 0.20%
-- Tempo necessário para treinamento: 1015.7 segundos
+- Tempo necessário para treinamento: 984.028 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.506 segundos
+- Tempo necessário para predição do conjunto de validação: 0.503 segundos
 
 ---
 
@@ -537,9 +537,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 95.28%
 - Desvio padrão da acurácia: 1.99%
-- Tempo necessário para treinamento: 17.372 segundos
+- Tempo necessário para treinamento: 17.096 segundos
 - Acurácia no conjunto de validação: 96.01%
-- Tempo necessário para predição do conjunto de validação: 0.011 segundos
+- Tempo necessário para predição do conjunto de validação: 0.014 segundos
 
 ### Treinando com 200 kernels
 
@@ -560,7 +560,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.27%
 - Desvio padrão da acurácia: 1.16%
-- Tempo necessário para treinamento: 25.184 segundos
+- Tempo necessário para treinamento: 24.889 segundos
 - Acurácia no conjunto de validação: 99.20%
 - Tempo necessário para predição do conjunto de validação: 0.023 segundos
 
@@ -583,9 +583,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.74%
 - Desvio padrão da acurácia: 0.69%
-- Tempo necessário para treinamento: 33.693 segundos
+- Tempo necessário para treinamento: 32.732 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.046 segundos
+- Tempo necessário para predição do conjunto de validação: 0.047 segundos
 
 ### Treinando com 400 kernels
 
@@ -606,7 +606,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.40%
 - Desvio padrão da acurácia: 0.47%
-- Tempo necessário para treinamento: 44.145 segundos
+- Tempo necessário para treinamento: 43.208 segundos
 - Acurácia no conjunto de validação: 99.47%
 - Tempo necessário para predição do conjunto de validação: 0.043 segundos
 
@@ -629,9 +629,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.27%
 - Desvio padrão da acurácia: 0.76%
-- Tempo necessário para treinamento: 53.128 segundos
+- Tempo necessário para treinamento: 51.591 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.063 segundos
+- Tempo necessário para predição do conjunto de validação: 0.072 segundos
 
 ### Treinando com 600 kernels
 
@@ -652,9 +652,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.53%
 - Desvio padrão da acurácia: 0.60%
-- Tempo necessário para treinamento: 63.773 segundos
+- Tempo necessário para treinamento: 61.702 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.078 segundos
+- Tempo necessário para predição do conjunto de validação: 0.076 segundos
 
 ### Treinando com 700 kernels
 
@@ -675,9 +675,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.53%
 - Desvio padrão da acurácia: 0.43%
-- Tempo necessário para treinamento: 68.444 segundos
+- Tempo necessário para treinamento: 66.258 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.087 segundos
+- Tempo necessário para predição do conjunto de validação: 0.083 segundos
 
 ### Treinando com 800 kernels
 
@@ -698,9 +698,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.67%
 - Desvio padrão da acurácia: 0.33%
-- Tempo necessário para treinamento: 73.487 segundos
+- Tempo necessário para treinamento: 71.732 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.083 segundos
+- Tempo necessário para predição do conjunto de validação: 0.099 segundos
 
 ### Treinando com 900 kernels
 
@@ -721,9 +721,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.40%
 - Desvio padrão da acurácia: 0.55%
-- Tempo necessário para treinamento: 83.539 segundos
+- Tempo necessário para treinamento: 80.885 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.103 segundos
+- Tempo necessário para predição do conjunto de validação: 0.113 segundos
 
 ### Treinando com 1000 kernels
 
@@ -744,9 +744,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.60%
 - Desvio padrão da acurácia: 0.44%
-- Tempo necessário para treinamento: 87.208 segundos
+- Tempo necessário para treinamento: 85.117 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.102 segundos
+- Tempo necessário para predição do conjunto de validação: 0.127 segundos
 
 ### Treinando com 10000 kernels (default)
 
@@ -767,9 +767,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.80%
 - Desvio padrão da acurácia: 0.31%
-- Tempo necessário para treinamento: 685.411 segundos
+- Tempo necessário para treinamento: 662.831 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.504 segundos
+- Tempo necessário para predição do conjunto de validação: 0.499 segundos
 
 ---
 
@@ -794,9 +794,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 93.61%
 - Desvio padrão da acurácia: 2.49%
-- Tempo necessário para treinamento: 15.36 segundos
+- Tempo necessário para treinamento: 15.421 segundos
 - Acurácia no conjunto de validação: 92.82%
-- Tempo necessário para predição do conjunto de validação: 0.014 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 200 kernels
 
@@ -817,9 +817,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 96.94%
 - Desvio padrão da acurácia: 1.24%
-- Tempo necessário para treinamento: 22.046 segundos
+- Tempo necessário para treinamento: 21.663 segundos
 - Acurácia no conjunto de validação: 97.61%
-- Tempo necessário para predição do conjunto de validação: 0.033 segundos
+- Tempo necessário para predição do conjunto de validação: 0.023 segundos
 
 ### Treinando com 300 kernels
 
@@ -840,9 +840,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.60%
 - Desvio padrão da acurácia: 1.24%
-- Tempo necessário para treinamento: 28.235 segundos
+- Tempo necessário para treinamento: 28.032 segundos
 - Acurácia no conjunto de validação: 97.34%
-- Tempo necessário para predição do conjunto de validação: 0.041 segundos
+- Tempo necessário para predição do conjunto de validação: 0.051 segundos
 
 ### Treinando com 400 kernels
 
@@ -863,9 +863,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.80%
 - Desvio padrão da acurácia: 0.99%
-- Tempo necessário para treinamento: 37.628 segundos
+- Tempo necessário para treinamento: 36.55 segundos
 - Acurácia no conjunto de validação: 98.40%
-- Tempo necessário para predição do conjunto de validação: 0.043 segundos
+- Tempo necessário para predição do conjunto de validação: 0.056 segundos
 
 ### Treinando com 500 kernels
 
@@ -886,9 +886,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.73%
 - Desvio padrão da acurácia: 0.81%
-- Tempo necessário para treinamento: 44.885 segundos
+- Tempo necessário para treinamento: 43.662 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.067 segundos
+- Tempo necessário para predição do conjunto de validação: 0.072 segundos
 
 ### Treinando com 600 kernels
 
@@ -909,9 +909,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.80%
 - Desvio padrão da acurácia: 1.02%
-- Tempo necessário para treinamento: 54.393 segundos
+- Tempo necessário para treinamento: 52.533 segundos
 - Acurácia no conjunto de validação: 98.14%
-- Tempo necessário para predição do conjunto de validação: 0.068 segundos
+- Tempo necessário para predição do conjunto de validação: 0.087 segundos
 
 ### Treinando com 700 kernels
 
@@ -932,9 +932,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.47%
 - Desvio padrão da acurácia: 0.72%
-- Tempo necessário para treinamento: 56.266 segundos
+- Tempo necessário para treinamento: 54.862 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.076 segundos
+- Tempo necessário para predição do conjunto de validação: 0.096 segundos
 
 ### Treinando com 800 kernels
 
@@ -955,9 +955,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.33%
 - Desvio padrão da acurácia: 0.73%
-- Tempo necessário para treinamento: 68.46 segundos
+- Tempo necessário para treinamento: 59.181 segundos
 - Acurácia no conjunto de validação: 98.67%
-- Tempo necessário para predição do conjunto de validação: 0.122 segundos
+- Tempo necessário para predição do conjunto de validação: 0.101 segundos
 
 ### Treinando com 900 kernels
 
@@ -978,9 +978,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.13%
 - Desvio padrão da acurácia: 0.67%
-- Tempo necessário para treinamento: 88.941 segundos
+- Tempo necessário para treinamento: 66.203 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.136 segundos
+- Tempo necessário para predição do conjunto de validação: 0.11 segundos
 
 ### Treinando com 1000 kernels
 
@@ -1001,9 +1001,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.33%
 - Desvio padrão da acurácia: 0.67%
-- Tempo necessário para treinamento: 94.265 segundos
+- Tempo necessário para treinamento: 69.12 segundos
 - Acurácia no conjunto de validação: 99.73%
-- Tempo necessário para predição do conjunto de validação: 0.132 segundos
+- Tempo necessário para predição do conjunto de validação: 0.124 segundos
 
 ### Treinando com 10000 kernels (default)
 
@@ -1024,7 +1024,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.73%
 - Desvio padrão da acurácia: 0.33%
-- Tempo necessário para treinamento: 606.294 segundos
+- Tempo necessário para treinamento: 504.625 segundos
 - Acurácia no conjunto de validação: 100.00%
 - Tempo necessário para predição do conjunto de validação: 0.502 segundos
 
@@ -1051,9 +1051,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 87.43%
 - Desvio padrão da acurácia: 3.29%
-- Tempo necessário para treinamento: 14.983 segundos
+- Tempo necessário para treinamento: 14.721 segundos
 - Acurácia no conjunto de validação: 87.50%
-- Tempo necessário para predição do conjunto de validação: 0.014 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 200 kernels
 
@@ -1074,9 +1074,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 90.35%
 - Desvio padrão da acurácia: 2.91%
-- Tempo necessário para treinamento: 20.141 segundos
+- Tempo necessário para treinamento: 19.988 segundos
 - Acurácia no conjunto de validação: 88.03%
-- Tempo necessário para predição do conjunto de validação: 0.02 segundos
+- Tempo necessário para predição do conjunto de validação: 0.022 segundos
 
 ### Treinando com 300 kernels
 
@@ -1097,9 +1097,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 92.68%
 - Desvio padrão da acurácia: 2.49%
-- Tempo necessário para treinamento: 26.384 segundos
+- Tempo necessário para treinamento: 25.527 segundos
 - Acurácia no conjunto de validação: 91.76%
-- Tempo necessário para predição do conjunto de validação: 0.046 segundos
+- Tempo necessário para predição do conjunto de validação: 0.045 segundos
 
 ### Treinando com 400 kernels
 
@@ -1120,9 +1120,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 92.02%
 - Desvio padrão da acurácia: 2.59%
-- Tempo necessário para treinamento: 33.865 segundos
+- Tempo necessário para treinamento: 33.398 segundos
 - Acurácia no conjunto de validação: 93.62%
-- Tempo necessário para predição do conjunto de validação: 0.041 segundos
+- Tempo necessário para predição do conjunto de validação: 0.042 segundos
 
 ### Treinando com 500 kernels
 
@@ -1143,9 +1143,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 93.22%
 - Desvio padrão da acurácia: 1.98%
-- Tempo necessário para treinamento: 41.472 segundos
+- Tempo necessário para treinamento: 39.878 segundos
 - Acurácia no conjunto de validação: 93.62%
-- Tempo necessário para predição do conjunto de validação: 0.056 segundos
+- Tempo necessário para predição do conjunto de validação: 0.072 segundos
 
 ### Treinando com 600 kernels
 
@@ -1166,9 +1166,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 93.21%
 - Desvio padrão da acurácia: 2.60%
-- Tempo necessário para treinamento: 49.31 segundos
+- Tempo necessário para treinamento: 47.808 segundos
 - Acurácia no conjunto de validação: 92.82%
-- Tempo necessário para predição do conjunto de validação: 0.072 segundos
+- Tempo necessário para predição do conjunto de validação: 0.083 segundos
 
 ### Treinando com 700 kernels
 
@@ -1189,9 +1189,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 94.15%
 - Desvio padrão da acurácia: 2.23%
-- Tempo necessário para treinamento: 72.06 segundos
+- Tempo necessário para treinamento: 49.178 segundos
 - Acurácia no conjunto de validação: 93.09%
-- Tempo necessário para predição do conjunto de validação: 0.134 segundos
+- Tempo necessário para predição do conjunto de validação: 0.079 segundos
 
 ### Treinando com 800 kernels
 
@@ -1212,9 +1212,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 94.21%
 - Desvio padrão da acurácia: 1.59%
-- Tempo necessário para treinamento: 59.385 segundos
+- Tempo necessário para treinamento: 53.245 segundos
 - Acurácia no conjunto de validação: 94.15%
-- Tempo necessário para predição do conjunto de validação: 0.103 segundos
+- Tempo necessário para predição do conjunto de validação: 0.102 segundos
 
 ### Treinando com 900 kernels
 
@@ -1235,9 +1235,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 94.21%
 - Desvio padrão da acurácia: 2.50%
-- Tempo necessário para treinamento: 71.662 segundos
+- Tempo necessário para treinamento: 58.323 segundos
 - Acurácia no conjunto de validação: 94.95%
-- Tempo necessário para predição do conjunto de validação: 0.092 segundos
+- Tempo necessário para predição do conjunto de validação: 0.093 segundos
 
 ### Treinando com 1000 kernels
 
@@ -1258,9 +1258,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 94.68%
 - Desvio padrão da acurácia: 2.32%
-- Tempo necessário para treinamento: 78.713 segundos
+- Tempo necessário para treinamento: 61.167 segundos
 - Acurácia no conjunto de validação: 96.01%
-- Tempo necessário para predição do conjunto de validação: 0.113 segundos
+- Tempo necessário para predição do conjunto de validação: 0.111 segundos
 
 ### Treinando com 10000 kernels (default)
 
@@ -1281,9 +1281,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 95.41%
 - Desvio padrão da acurácia: 2.06%
-- Tempo necessário para treinamento: 701.279 segundos
+- Tempo necessário para treinamento: 426.134 segundos
 - Acurácia no conjunto de validação: 96.54%
-- Tempo necessário para predição do conjunto de validação: 0.522 segundos
+- Tempo necessário para predição do conjunto de validação: 0.504 segundos
 
 ---
 
@@ -1308,9 +1308,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 60.84%
 - Desvio padrão da acurácia: 3.88%
-- Tempo necessário para treinamento: 14.408 segundos
+- Tempo necessário para treinamento: 14.14 segundos
 - Acurácia no conjunto de validação: 61.97%
-- Tempo necessário para predição do conjunto de validação: 0.014 segundos
+- Tempo necessário para predição do conjunto de validação: 0.012 segundos
 
 ### Treinando com 200 kernels
 
@@ -1331,9 +1331,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 60.04%
 - Desvio padrão da acurácia: 1.55%
-- Tempo necessário para treinamento: 20.178 segundos
+- Tempo necessário para treinamento: 19.341 segundos
 - Acurácia no conjunto de validação: 61.44%
-- Tempo necessário para predição do conjunto de validação: 0.02 segundos
+- Tempo necessário para predição do conjunto de validação: 0.023 segundos
 
 ### Treinando com 300 kernels
 
@@ -1354,9 +1354,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 61.37%
 - Desvio padrão da acurácia: 2.52%
-- Tempo necessário para treinamento: 25.45 segundos
+- Tempo necessário para treinamento: 24.546 segundos
 - Acurácia no conjunto de validação: 63.83%
-- Tempo necessário para predição do conjunto de validação: 0.059 segundos
+- Tempo necessário para predição do conjunto de validação: 0.044 segundos
 
 ### Treinando com 400 kernels
 
@@ -1377,9 +1377,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 62.96%
 - Desvio padrão da acurácia: 3.53%
-- Tempo necessário para treinamento: 39.965 segundos
+- Tempo necessário para treinamento: 31.71 segundos
 - Acurácia no conjunto de validação: 64.63%
-- Tempo necessário para predição do conjunto de validação: 0.052 segundos
+- Tempo necessário para predição do conjunto de validação: 0.044 segundos
 
 ### Treinando com 500 kernels
 
@@ -1400,9 +1400,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 62.90%
 - Desvio padrão da acurácia: 3.06%
-- Tempo necessário para treinamento: 46.548 segundos
+- Tempo necessário para treinamento: 37.84 segundos
 - Acurácia no conjunto de validação: 65.16%
-- Tempo necessário para predição do conjunto de validação: 0.058 segundos
+- Tempo necessário para predição do conjunto de validação: 0.068 segundos
 
 ### Treinando com 600 kernels
 
@@ -1423,9 +1423,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 64.03%
 - Desvio padrão da acurácia: 2.58%
-- Tempo necessário para treinamento: 49.501 segundos
+- Tempo necessário para treinamento: 45.572 segundos
 - Acurácia no conjunto de validação: 65.16%
-- Tempo necessário para predição do conjunto de validação: 0.065 segundos
+- Tempo necessário para predição do conjunto de validação: 0.084 segundos
 
 ### Treinando com 700 kernels
 
@@ -1446,9 +1446,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 63.76%
 - Desvio padrão da acurácia: 2.24%
-- Tempo necessário para treinamento: 50.203 segundos
+- Tempo necessário para treinamento: 46.422 segundos
 - Acurácia no conjunto de validação: 65.16%
-- Tempo necessário para predição do conjunto de validação: 0.244 segundos
+- Tempo necessário para predição do conjunto de validação: 0.094 segundos
 
 ### Treinando com 800 kernels
 
@@ -1469,9 +1469,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 64.89%
 - Desvio padrão da acurácia: 2.45%
-- Tempo necessário para treinamento: 61.138 segundos
+- Tempo necessário para treinamento: 50.027 segundos
 - Acurácia no conjunto de validação: 66.49%
-- Tempo necessário para predição do conjunto de validação: 0.124 segundos
+- Tempo necessário para predição do conjunto de validação: 0.105 segundos
 
 ### Treinando com 900 kernels
 
@@ -1492,9 +1492,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 63.77%
 - Desvio padrão da acurácia: 1.52%
-- Tempo necessário para treinamento: 77.74 segundos
+- Tempo necessário para treinamento: 54.563 segundos
 - Acurácia no conjunto de validação: 63.83%
-- Tempo necessário para predição do conjunto de validação: 0.148 segundos
+- Tempo necessário para predição do conjunto de validação: 0.094 segundos
 
 ### Treinando com 1000 kernels
 
@@ -1515,9 +1515,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 64.30%
 - Desvio padrão da acurácia: 1.43%
-- Tempo necessário para treinamento: 96.579 segundos
+- Tempo necessário para treinamento: 57.121 segundos
 - Acurácia no conjunto de validação: 64.89%
-- Tempo necessário para predição do conjunto de validação: 0.135 segundos
+- Tempo necessário para predição do conjunto de validação: 0.109 segundos
 
 ### Treinando com 10000 kernels (default)
 
@@ -1538,9 +1538,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 67.09%
 - Desvio padrão da acurácia: 2.08%
-- Tempo necessário para treinamento: 546.559 segundos
+- Tempo necessário para treinamento: 387.656 segundos
 - Acurácia no conjunto de validação: 66.76%
-- Tempo necessário para predição do conjunto de validação: 0.53 segundos
+- Tempo necessário para predição do conjunto de validação: 0.502 segundos
 
 ---
 
@@ -1565,9 +1565,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 53.86%
 - Desvio padrão da acurácia: 2.67%
-- Tempo necessário para treinamento: 16.288 segundos
+- Tempo necessário para treinamento: 14.037 segundos
 - Acurácia no conjunto de validação: 51.06%
-- Tempo necessário para predição do conjunto de validação: 0.014 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 200 kernels
 
@@ -1588,9 +1588,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 52.86%
 - Desvio padrão da acurácia: 2.98%
-- Tempo necessário para treinamento: 24.766 segundos
+- Tempo necessário para treinamento: 18.818 segundos
 - Acurácia no conjunto de validação: 54.52%
-- Tempo necessário para predição do conjunto de validação: 0.029 segundos
+- Tempo necessário para predição do conjunto de validação: 0.022 segundos
 
 ### Treinando com 300 kernels
 
@@ -1611,9 +1611,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 54.19%
 - Desvio padrão da acurácia: 2.62%
-- Tempo necessário para treinamento: 42.04 segundos
+- Tempo necessário para treinamento: 24.016 segundos
 - Acurácia no conjunto de validação: 51.60%
-- Tempo necessário para predição do conjunto de validação: 0.042 segundos
+- Tempo necessário para predição do conjunto de validação: 0.066 segundos
 
 ### Treinando com 400 kernels
 
@@ -1634,9 +1634,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 53.86%
 - Desvio padrão da acurácia: 2.58%
-- Tempo necessário para treinamento: 42.015 segundos
+- Tempo necessário para treinamento: 30.964 segundos
 - Acurácia no conjunto de validação: 55.32%
-- Tempo necessário para predição do conjunto de validação: 0.055 segundos
+- Tempo necessário para predição do conjunto de validação: 0.059 segundos
 
 ### Treinando com 500 kernels
 
@@ -1657,9 +1657,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 54.45%
 - Desvio padrão da acurácia: 2.75%
-- Tempo necessário para treinamento: 46.617 segundos
+- Tempo necessário para treinamento: 37.051 segundos
 - Acurácia no conjunto de validação: 53.99%
-- Tempo necessário para predição do conjunto de validação: 0.066 segundos
+- Tempo necessário para predição do conjunto de validação: 0.052 segundos
 
 ### Treinando com 600 kernels
 
@@ -1680,9 +1680,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 54.59%
 - Desvio padrão da acurácia: 2.54%
-- Tempo necessário para treinamento: 61.128 segundos
+- Tempo necessário para treinamento: 44.371 segundos
 - Acurácia no conjunto de validação: 55.85%
-- Tempo necessário para predição do conjunto de validação: 0.124 segundos
+- Tempo necessário para predição do conjunto de validação: 0.071 segundos
 
 ### Treinando com 700 kernels
 
@@ -1703,9 +1703,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 54.39%
 - Desvio padrão da acurácia: 2.73%
-- Tempo necessário para treinamento: 58.078 segundos
+- Tempo necessário para treinamento: 44.816 segundos
 - Acurácia no conjunto de validação: 56.12%
-- Tempo necessário para predição do conjunto de validação: 0.085 segundos
+- Tempo necessário para predição do conjunto de validação: 0.092 segundos
 
 ### Treinando com 800 kernels
 
@@ -1726,9 +1726,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 54.12%
 - Desvio padrão da acurácia: 2.68%
-- Tempo necessário para treinamento: 61.92 segundos
+- Tempo necessário para treinamento: 48.337 segundos
 - Acurácia no conjunto de validação: 54.79%
-- Tempo necessário para predição do conjunto de validação: 0.12 segundos
+- Tempo necessário para predição do conjunto de validação: 0.09 segundos
 
 ### Treinando com 900 kernels
 
@@ -1749,9 +1749,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 54.00%
 - Desvio padrão da acurácia: 3.94%
-- Tempo necessário para treinamento: 76.479 segundos
+- Tempo necessário para treinamento: 52.928 segundos
 - Acurácia no conjunto de validação: 53.19%
-- Tempo necessário para predição do conjunto de validação: 0.176 segundos
+- Tempo necessário para predição do conjunto de validação: 0.11 segundos
 
 ### Treinando com 1000 kernels
 
@@ -1772,9 +1772,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 53.92%
 - Desvio padrão da acurácia: 3.45%
-- Tempo necessário para treinamento: 63.873 segundos
+- Tempo necessário para treinamento: 55.398 segundos
 - Acurácia no conjunto de validação: 55.32%
-- Tempo necessário para predição do conjunto de validação: 0.101 segundos
+- Tempo necessário para predição do conjunto de validação: 0.121 segundos
 
 ### Treinando com 10000 kernels (default)
 
@@ -1795,9 +1795,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 55.78%
 - Desvio padrão da acurácia: 2.56%
-- Tempo necessário para treinamento: 449.351 segundos
+- Tempo necessário para treinamento: 367.682 segundos
 - Acurácia no conjunto de validação: 56.12%
-- Tempo necessário para predição do conjunto de validação: 0.548 segundos
+- Tempo necessário para predição do conjunto de validação: 0.499 segundos
 
 ---
 
@@ -1822,9 +1822,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 47.94%
 - Desvio padrão da acurácia: 3.19%
-- Tempo necessário para treinamento: 15.609 segundos
+- Tempo necessário para treinamento: 13.845 segundos
 - Acurácia no conjunto de validação: 48.94%
-- Tempo necessário para predição do conjunto de validação: 0.042 segundos
+- Tempo necessário para predição do conjunto de validação: 0.014 segundos
 
 ### Treinando com 200 kernels
 
@@ -1845,9 +1845,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 48.80%
 - Desvio padrão da acurácia: 3.08%
-- Tempo necessário para treinamento: 23.234 segundos
+- Tempo necessário para treinamento: 18.462 segundos
 - Acurácia no conjunto de validação: 48.67%
-- Tempo necessário para predição do conjunto de validação: 0.032 segundos
+- Tempo necessário para predição do conjunto de validação: 0.023 segundos
 
 ### Treinando com 300 kernels
 
@@ -1868,9 +1868,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 49.07%
 - Desvio padrão da acurácia: 3.16%
-- Tempo necessário para treinamento: 29.121 segundos
+- Tempo necessário para treinamento: 23.599 segundos
 - Acurácia no conjunto de validação: 49.20%
-- Tempo necessário para predição do conjunto de validação: 0.034 segundos
+- Tempo necessário para predição do conjunto de validação: 0.054 segundos
 
 ### Treinando com 400 kernels
 
@@ -1891,9 +1891,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 49.47%
 - Desvio padrão da acurácia: 2.80%
-- Tempo necessário para treinamento: 43.998 segundos
+- Tempo necessário para treinamento: 30.375 segundos
 - Acurácia no conjunto de validação: 47.07%
-- Tempo necessário para predição do conjunto de validação: 0.045 segundos
+- Tempo necessário para predição do conjunto de validação: 0.059 segundos
 
 ### Treinando com 500 kernels
 
@@ -1914,9 +1914,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 48.07%
 - Desvio padrão da acurácia: 2.10%
-- Tempo necessário para treinamento: 45.734 segundos
+- Tempo necessário para treinamento: 36.356 segundos
 - Acurácia no conjunto de validação: 48.40%
-- Tempo necessário para predição do conjunto de validação: 0.066 segundos
+- Tempo necessário para predição do conjunto de validação: 0.074 segundos
 
 ### Treinando com 600 kernels
 
@@ -1937,9 +1937,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 48.28%
 - Desvio padrão da acurácia: 3.15%
-- Tempo necessário para treinamento: 73.157 segundos
+- Tempo necessário para treinamento: 43.87 segundos
 - Acurácia no conjunto de validação: 47.61%
-- Tempo necessário para predição do conjunto de validação: 0.067 segundos
+- Tempo necessário para predição do conjunto de validação: 0.085 segundos
 
 ### Treinando com 700 kernels
 
@@ -1960,9 +1960,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 49.07%
 - Desvio padrão da acurácia: 2.91%
-- Tempo necessário para treinamento: 54.257 segundos
+- Tempo necessário para treinamento: 44.209 segundos
 - Acurácia no conjunto de validação: 48.94%
-- Tempo necessário para predição do conjunto de validação: 0.117 segundos
+- Tempo necessário para predição do conjunto de validação: 0.094 segundos
 
 ### Treinando com 800 kernels
 
@@ -1983,9 +1983,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 48.47%
 - Desvio padrão da acurácia: 2.29%
-- Tempo necessário para treinamento: 68.808 segundos
+- Tempo necessário para treinamento: 47.574 segundos
 - Acurácia no conjunto de validação: 48.67%
-- Tempo necessário para predição do conjunto de validação: 0.12 segundos
+- Tempo necessário para predição do conjunto de validação: 0.104 segundos
 
 ### Treinando com 900 kernels
 
@@ -2006,9 +2006,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 49.07%
 - Desvio padrão da acurácia: 2.51%
-- Tempo necessário para treinamento: 74.754 segundos
+- Tempo necessário para treinamento: 51.98 segundos
 - Acurácia no conjunto de validação: 49.20%
-- Tempo necessário para predição do conjunto de validação: 0.12 segundos
+- Tempo necessário para predição do conjunto de validação: 0.108 segundos
 
 ### Treinando com 1000 kernels
 
@@ -2029,9 +2029,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 48.21%
 - Desvio padrão da acurácia: 2.65%
-- Tempo necessário para treinamento: 77.5 segundos
+- Tempo necessário para treinamento: 54.46 segundos
 - Acurácia no conjunto de validação: 50.80%
-- Tempo necessário para predição do conjunto de validação: 0.196 segundos
+- Tempo necessário para predição do conjunto de validação: 0.103 segundos
 
 ### Treinando com 10000 kernels (default)
 
@@ -2052,6 +2052,6 @@ O resulto final obtido foi:
 
 - Média da acurácia: 49.47%
 - Desvio padrão da acurácia: 3.29%
-- Tempo necessário para treinamento: 498.08 segundos
+- Tempo necessário para treinamento: 358.033 segundos
 - Acurácia no conjunto de validação: 50.27%
-- Tempo necessário para predição do conjunto de validação: 0.609 segundos
+- Tempo necessário para predição do conjunto de validação: 0.506 segundos

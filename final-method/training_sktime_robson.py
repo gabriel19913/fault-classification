@@ -83,13 +83,17 @@ def evaluating_model(model, transformation, X_test, y_test, cycle, scores, count
     # Evaluating model
     score = model.score(X_test, y_test)
     scores.append(score)
+    if isinstance(transformation, MiniRocketMultivariate):
+        num = transformation.num_features
+    else:
+        num = transformation.num_kernels
     if save and (
         len(scores) != 1 and score > scores[count] or len(scores) == 1
     ):
-        pickle.dump(transformation, open(MODEL_PATH + f'{model_name}_{cycle}.pkl', 'wb'))
-        pickle.dump(model, open(MODEL_PATH + f'{model_name}_classifier_{cycle}.pkl', 'wb'))
-        pickle.dump(max_list, open(MODEL_PATH + f'{model_name}_{cycle}_max_values.pkl', 'wb'))
-    return scores
+        pickle.dump(transformation, open(MODEL_PATH + f'{model_name}_{cycle}_{num}.pkl', 'wb'))
+        pickle.dump(model, open(MODEL_PATH + f'{model_name}_classifier_{cycle}_{num}.pkl', 'wb'))
+        pickle.dump(max_list, open(MODEL_PATH + f'{model_name}_{cycle}_max_values_{num}.pkl', 'wb'))
+    return scores, num
 
 def print_results(cycle, model_name, scores, end_time, start_time, save=None):
     folds_labels = [f'- Fold {i}' for i in range(1, 11)]
@@ -127,17 +131,17 @@ def kfold(train_X, train_y, test_X, test_y, model, cycle, max_list, model_name='
             X_te_transform = X_te_norm.copy()
 
         model.fit(X_tr_transform, y_tr)
-        scores = evaluating_model(model, transformation, X_te_transform, y_te, cycle, scores,
+        scores, num = evaluating_model(model, transformation, X_te_transform, y_te, cycle, scores,
                                   count, max_list, model_name, save)
 
     e = time.time()
     final_scores = np.array(scores)
     print_results(cycle, model_name, final_scores, e, s, save)
-    return np.mean(scores) * 100, np.round(e - s, 3)
+    return np.mean(scores) * 100, np.round(e - s, 3), num
 
-def validating(X_val, y_val, model_name, cycle, max_list, save=None):
+def validating(X_val, y_val, model_name, cycle, max_list, num, save=None):
     s = time.time()
-    with open(MODEL_PATH + f'{model_name}_classifier_{cycle}.pkl', 'rb') as f:
+    with open(MODEL_PATH + f'{model_name}_classifier_{cycle}_{num}.pkl', 'rb') as f:
         best_model = pickle.load(f)
     val_score = best_model.score(X_val, y_val)
     y_pred = best_model.predict(X_val)
@@ -214,8 +218,8 @@ def training(signal, cycle, model, model_name='', transformation=None, save=None
     train_y = open_folds(cycle, 'train', 'y', signal)
     test_X = open_folds(cycle, 'test', 'X', signal)
     test_y = open_folds(cycle, 'test', 'y', signal)
-    mean_acc, train_time = kfold(train_X, train_y, test_X, test_y, model, cycle, max_list, model_name, transformation, save)
-    y_pred, val_acc, val_time = validating(X_val_transform, y_val, model_name, cycle, max_list, save)
+    mean_acc, train_time, num = kfold(train_X, train_y, test_X, test_y, model, cycle, max_list, model_name, transformation, save)
+    y_pred, val_acc, val_time = validating(X_val_transform, y_val, model_name, cycle, max_list, num, save)
     title = generate_title(cycle, model_name)
     generate_confusion_matrix(y_val, y_pred, 'figs_cm/new_dataset/', f'{cycle}_{model_name}', title=title)
     # print(f'Finalizado treinamento para {title}!')

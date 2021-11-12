@@ -1,4 +1,4 @@
-# Treinamento do modelo usando MiniRocket
+# Treinamento do modelo usando MiniRocket dataset 1
 
 ---
 
@@ -23,7 +23,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 8.399 segundos
+- Tempo necessário para treinamento: 7.018 segundos
 - Acurácia no conjunto de validação: 100.00%
 - Tempo necessário para predição do conjunto de validação: 0.011 segundos
 
@@ -46,9 +46,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 8.594 segundos
+- Tempo necessário para treinamento: 8.349 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.013 segundos
+- Tempo necessário para predição do conjunto de validação: 0.015 segundos
 
 ### Treinando com 300 features
 
@@ -69,9 +69,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 10.018 segundos
+- Tempo necessário para treinamento: 9.824 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.019 segundos
+- Tempo necessário para predição do conjunto de validação: 0.02 segundos
 
 ### Treinando com 400 features
 
@@ -92,9 +92,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 11.652 segundos
+- Tempo necessário para treinamento: 11.296 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.025 segundos
+- Tempo necessário para predição do conjunto de validação: 0.035 segundos
 
 ### Treinando com 500 features
 
@@ -115,9 +115,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 13.296 segundos
+- Tempo necessário para treinamento: 13.286 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.036 segundos
+- Tempo necessário para predição do conjunto de validação: 0.041 segundos
 
 ### Treinando com 600 features
 
@@ -138,9 +138,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 16.085 segundos
+- Tempo necessário para treinamento: 15.422 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.046 segundos
+- Tempo necessário para predição do conjunto de validação: 0.049 segundos
 
 ### Treinando com 700 features
 
@@ -161,7 +161,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 18.054 segundos
+- Tempo necessário para treinamento: 17.126 segundos
 - Acurácia no conjunto de validação: 100.00%
 - Tempo necessário para predição do conjunto de validação: 0.054 segundos
 
@@ -184,9 +184,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 18.482 segundos
+- Tempo necessário para treinamento: 18.563 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.051 segundos
+- Tempo necessário para predição do conjunto de validação: 0.062 segundos
 
 ### Treinando com 900 features
 
@@ -207,9 +207,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 22.489 segundos
+- Tempo necessário para treinamento: 19.824 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.068 segundos
+- Tempo necessário para predição do conjunto de validação: 0.076 segundos
 
 ### Treinando com 1000 features
 
@@ -230,9 +230,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 25.148 segundos
+- Tempo necessário para treinamento: 21.411 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.066 segundos
+- Tempo necessário para predição do conjunto de validação: 0.063 segundos
 
 ### Treinando com 10000 features (default)
 
@@ -253,9 +253,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 45.79 segundos
+- Tempo necessário para treinamento: 39.56 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.39 segundos
+- Tempo necessário para predição do conjunto de validação: 0.357 segundos
 
 ---
 
@@ -280,9 +280,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 7.72 segundos
+- Tempo necessário para treinamento: 6.58 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.01 segundos
+- Tempo necessário para predição do conjunto de validação: 0.009 segundos
 
 ### Treinando com 200 features
 
@@ -303,9 +303,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 9.483 segundos
+- Tempo necessário para treinamento: 8.224 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.014 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 300 features
 
@@ -326,9 +326,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 11.607 segundos
+- Tempo necessário para treinamento: 9.605 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.032 segundos
+- Tempo necessário para predição do conjunto de validação: 0.02 segundos
 
 ### Treinando com 400 features
 
@@ -349,9 +349,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 14.377 segundos
+- Tempo necessário para treinamento: 10.929 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.035 segundos
+- Tempo necessário para predição do conjunto de validação: 0.032 segundos
 
 ### Treinando com 500 features
 
@@ -372,9 +372,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 14.469 segundos
+- Tempo necessário para treinamento: 12.59 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.04 segundos
+- Tempo necessário para predição do conjunto de validação: 0.041 segundos
 
 ### Treinando com 600 features
 
@@ -395,9 +395,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 18.785 segundos
+- Tempo necessário para treinamento: 14.78 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.047 segundos
+- Tempo necessário para predição do conjunto de validação: 0.049 segundos
 
 ### Treinando com 700 features
 
@@ -418,9 +418,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 20.941 segundos
+- Tempo necessário para treinamento: 16.423 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.047 segundos
+- Tempo necessário para predição do conjunto de validação: 0.052 segundos
 
 ### Treinando com 800 features
 
@@ -441,9 +441,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 20.756 segundos
+- Tempo necessário para treinamento: 17.33 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.083 segundos
+- Tempo necessário para predição do conjunto de validação: 0.075 segundos
 
 ### Treinando com 900 features
 
@@ -464,9 +464,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 21.222 segundos
+- Tempo necessário para treinamento: 17.15 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.077 segundos
+- Tempo necessário para predição do conjunto de validação: 0.062 segundos
 
 ### Treinando com 1000 features
 
@@ -487,9 +487,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 21.873 segundos
+- Tempo necessário para treinamento: 18.722 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.061 segundos
+- Tempo necessário para predição do conjunto de validação: 0.09 segundos
 
 ### Treinando com 10000 features (default)
 
@@ -510,9 +510,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 40.192 segundos
+- Tempo necessário para treinamento: 33.836 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.372 segundos
+- Tempo necessário para predição do conjunto de validação: 0.358 segundos
 
 ---
 
@@ -537,9 +537,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.00%
 - Desvio padrão da acurácia: 1.36%
-- Tempo necessário para treinamento: 9.414 segundos
+- Tempo necessário para treinamento: 6.571 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.023 segundos
+- Tempo necessário para predição do conjunto de validação: 0.009 segundos
 
 ### Treinando com 200 features
 
@@ -560,9 +560,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.60%
 - Desvio padrão da acurácia: 0.61%
-- Tempo necessário para treinamento: 11.344 segundos
+- Tempo necessário para treinamento: 8.047 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.018 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 300 features
 
@@ -583,9 +583,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.47%
 - Desvio padrão da acurácia: 0.65%
-- Tempo necessário para treinamento: 9.911 segundos
+- Tempo necessário para treinamento: 9.46 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.016 segundos
+- Tempo necessário para predição do conjunto de validação: 0.02 segundos
 
 ### Treinando com 400 features
 
@@ -606,9 +606,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 11.352 segundos
+- Tempo necessário para treinamento: 10.985 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.02 segundos
+- Tempo necessário para predição do conjunto de validação: 0.045 segundos
 
 ### Treinando com 500 features
 
@@ -629,9 +629,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 11.775 segundos
+- Tempo necessário para treinamento: 11.337 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.023 segundos
+- Tempo necessário para predição do conjunto de validação: 0.04 segundos
 
 ### Treinando com 600 features
 
@@ -652,9 +652,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 15.106 segundos
+- Tempo necessário para treinamento: 14.308 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.032 segundos
+- Tempo necessário para predição do conjunto de validação: 0.048 segundos
 
 ### Treinando com 700 features
 
@@ -675,9 +675,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 16.861 segundos
+- Tempo necessário para treinamento: 16.239 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.037 segundos
+- Tempo necessário para predição do conjunto de validação: 0.052 segundos
 
 ### Treinando com 800 features
 
@@ -698,9 +698,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 16.507 segundos
+- Tempo necessário para treinamento: 16.314 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.04 segundos
+- Tempo necessário para predição do conjunto de validação: 0.055 segundos
 
 ### Treinando com 900 features
 
@@ -721,9 +721,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 17.822 segundos
+- Tempo necessário para treinamento: 17.064 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.045 segundos
+- Tempo necessário para predição do conjunto de validação: 0.061 segundos
 
 ### Treinando com 1000 features
 
@@ -744,7 +744,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 20.25 segundos
+- Tempo necessário para treinamento: 17.808 segundos
 - Acurácia no conjunto de validação: 100.00%
 - Tempo necessário para predição do conjunto de validação: 0.065 segundos
 
@@ -767,9 +767,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 34.901 segundos
+- Tempo necessário para treinamento: 29.787 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.401 segundos
+- Tempo necessário para predição do conjunto de validação: 0.358 segundos
 
 ---
 
@@ -794,9 +794,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.48%
 - Desvio padrão da acurácia: 2.75%
-- Tempo necessário para treinamento: 7.629 segundos
+- Tempo necessário para treinamento: 6.696 segundos
 - Acurácia no conjunto de validação: 97.87%
-- Tempo necessário para predição do conjunto de validação: 0.01 segundos
+- Tempo necessário para predição do conjunto de validação: 0.009 segundos
 
 ### Treinando com 200 features
 
@@ -817,9 +817,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.47%
 - Desvio padrão da acurácia: 0.65%
-- Tempo necessário para treinamento: 9.135 segundos
+- Tempo necessário para treinamento: 7.989 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.015 segundos
+- Tempo necessário para predição do conjunto de validação: 0.014 segundos
 
 ### Treinando com 300 features
 
@@ -840,9 +840,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.60%
 - Desvio padrão da acurácia: 0.85%
-- Tempo necessário para treinamento: 10.966 segundos
+- Tempo necessário para treinamento: 9.094 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.054 segundos
+- Tempo necessário para predição do conjunto de validação: 0.02 segundos
 
 ### Treinando com 400 features
 
@@ -863,7 +863,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 12.76 segundos
+- Tempo necessário para treinamento: 10.865 segundos
 - Acurácia no conjunto de validação: 100.00%
 - Tempo necessário para predição do conjunto de validação: 0.034 segundos
 
@@ -886,9 +886,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.47%
 - Desvio padrão da acurácia: 0.65%
-- Tempo necessário para treinamento: 13.914 segundos
+- Tempo necessário para treinamento: 11.097 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.031 segundos
+- Tempo necessário para predição do conjunto de validação: 0.039 segundos
 
 ### Treinando com 600 features
 
@@ -909,9 +909,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 18.6 segundos
+- Tempo necessário para treinamento: 14.061 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.092 segundos
+- Tempo necessário para predição do conjunto de validação: 0.047 segundos
 
 ### Treinando com 700 features
 
@@ -932,9 +932,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 19.63 segundos
+- Tempo necessário para treinamento: 14.809 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.07 segundos
+- Tempo necessário para predição do conjunto de validação: 0.052 segundos
 
 ### Treinando com 800 features
 
@@ -955,9 +955,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.73%
 - Desvio padrão da acurácia: 0.53%
-- Tempo necessário para treinamento: 19.101 segundos
+- Tempo necessário para treinamento: 15.82 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.051 segundos
+- Tempo necessário para predição do conjunto de validação: 0.047 segundos
 
 ### Treinando com 900 features
 
@@ -978,9 +978,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 19.066 segundos
+- Tempo necessário para treinamento: 16.011 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.064 segundos
+- Tempo necessário para predição do conjunto de validação: 0.058 segundos
 
 ### Treinando com 1000 features
 
@@ -1001,9 +1001,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 20.327 segundos
+- Tempo necessário para treinamento: 17.354 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.056 segundos
+- Tempo necessário para predição do conjunto de validação: 0.07 segundos
 
 ### Treinando com 10000 features (default)
 
@@ -1024,9 +1024,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 29.567 segundos
+- Tempo necessário para treinamento: 24.876 segundos
 - Acurácia no conjunto de validação: 100.00%
-- Tempo necessário para predição do conjunto de validação: 0.377 segundos
+- Tempo necessário para predição do conjunto de validação: 0.359 segundos
 
 ---
 
@@ -1051,9 +1051,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 96.01%
 - Desvio padrão da acurácia: 2.22%
-- Tempo necessário para treinamento: 9.398 segundos
+- Tempo necessário para treinamento: 6.693 segundos
 - Acurácia no conjunto de validação: 96.28%
-- Tempo necessário para predição do conjunto de validação: 0.044 segundos
+- Tempo necessário para predição do conjunto de validação: 0.027 segundos
 
 ### Treinando com 200 features
 
@@ -1074,9 +1074,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.67%
 - Desvio padrão da acurácia: 1.19%
-- Tempo necessário para treinamento: 13.648 segundos
+- Tempo necessário para treinamento: 7.906 segundos
 - Acurácia no conjunto de validação: 96.81%
-- Tempo necessário para predição do conjunto de validação: 0.04 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 300 features
 
@@ -1097,9 +1097,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.47%
 - Desvio padrão da acurácia: 0.65%
-- Tempo necessário para treinamento: 17.325 segundos
+- Tempo necessário para treinamento: 9.084 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.054 segundos
+- Tempo necessário para predição do conjunto de validação: 0.02 segundos
 
 ### Treinando com 400 features
 
@@ -1120,9 +1120,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.33%
 - Desvio padrão da acurácia: 1.23%
-- Tempo necessário para treinamento: 19.755 segundos
+- Tempo necessário para treinamento: 10.776 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.036 segundos
+- Tempo necessário para predição do conjunto de validação: 0.033 segundos
 
 ### Treinando com 500 features
 
@@ -1143,9 +1143,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 21.954 segundos
+- Tempo necessário para treinamento: 11.197 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.076 segundos
+- Tempo necessário para predição do conjunto de validação: 0.027 segundos
 
 ### Treinando com 600 features
 
@@ -1166,7 +1166,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.34%
 - Desvio padrão da acurácia: 0.66%
-- Tempo necessário para treinamento: 20.622 segundos
+- Tempo necessário para treinamento: 14.259 segundos
 - Acurácia no conjunto de validação: 99.47%
 - Tempo necessário para predição do conjunto de validação: 0.047 segundos
 
@@ -1189,9 +1189,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.60%
 - Desvio padrão da acurácia: 0.85%
-- Tempo necessário para treinamento: 15.564 segundos
+- Tempo necessário para treinamento: 14.805 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.037 segundos
+- Tempo necessário para predição do conjunto de validação: 0.052 segundos
 
 ### Treinando com 800 features
 
@@ -1212,9 +1212,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 19.104 segundos
+- Tempo necessário para treinamento: 15.877 segundos
 - Acurácia no conjunto de validação: 98.40%
-- Tempo necessário para predição do conjunto de validação: 0.05 segundos
+- Tempo necessário para predição do conjunto de validação: 0.055 segundos
 
 ### Treinando com 900 features
 
@@ -1235,9 +1235,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.87%
 - Desvio padrão da acurácia: 0.40%
-- Tempo necessário para treinamento: 19.147 segundos
+- Tempo necessário para treinamento: 15.982 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.055 segundos
+- Tempo necessário para predição do conjunto de validação: 0.071 segundos
 
 ### Treinando com 1000 features
 
@@ -1258,9 +1258,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 100.00%
 - Desvio padrão da acurácia: 0.00%
-- Tempo necessário para treinamento: 19.29 segundos
+- Tempo necessário para treinamento: 16.226 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.057 segundos
+- Tempo necessário para predição do conjunto de validação: 0.062 segundos
 
 ### Treinando com 10000 features (default)
 
@@ -1281,9 +1281,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.73%
 - Desvio padrão da acurácia: 0.53%
-- Tempo necessário para treinamento: 27.058 segundos
+- Tempo necessário para treinamento: 22.519 segundos
 - Acurácia no conjunto de validação: 99.47%
-- Tempo necessário para predição do conjunto de validação: 0.396 segundos
+- Tempo necessário para predição do conjunto de validação: 0.356 segundos
 
 ---
 
@@ -1308,9 +1308,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 96.41%
 - Desvio padrão da acurácia: 2.74%
-- Tempo necessário para treinamento: 7.754 segundos
+- Tempo necessário para treinamento: 6.67 segundos
 - Acurácia no conjunto de validação: 92.02%
-- Tempo necessário para predição do conjunto de validação: 0.023 segundos
+- Tempo necessário para predição do conjunto de validação: 0.009 segundos
 
 ### Treinando com 200 features
 
@@ -1331,9 +1331,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.61%
 - Desvio padrão da acurácia: 1.16%
-- Tempo necessário para treinamento: 9.409 segundos
+- Tempo necessário para treinamento: 7.874 segundos
 - Acurácia no conjunto de validação: 97.87%
-- Tempo necessário para predição do conjunto de validação: 0.014 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 300 features
 
@@ -1354,9 +1354,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.07%
 - Desvio padrão da acurácia: 1.04%
-- Tempo necessário para treinamento: 10.947 segundos
+- Tempo necessário para treinamento: 9.172 segundos
 - Acurácia no conjunto de validação: 97.34%
-- Tempo necessário para predição do conjunto de validação: 0.045 segundos
+- Tempo necessário para predição do conjunto de validação: 0.02 segundos
 
 ### Treinando com 400 features
 
@@ -1377,9 +1377,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.40%
 - Desvio padrão da acurácia: 1.30%
-- Tempo necessário para treinamento: 13.209 segundos
+- Tempo necessário para treinamento: 10.587 segundos
 - Acurácia no conjunto de validação: 97.87%
-- Tempo necessário para predição do conjunto de validação: 0.051 segundos
+- Tempo necessário para predição do conjunto de validação: 0.023 segundos
 
 ### Treinando com 500 features
 
@@ -1400,9 +1400,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.07%
 - Desvio padrão da acurácia: 1.34%
-- Tempo necessário para treinamento: 13.469 segundos
+- Tempo necessário para treinamento: 10.775 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.028 segundos
+- Tempo necessário para predição do conjunto de validação: 0.037 segundos
 
 ### Treinando com 600 features
 
@@ -1423,9 +1423,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.07%
 - Desvio padrão da acurácia: 0.61%
-- Tempo necessário para treinamento: 16.322 segundos
+- Tempo necessário para treinamento: 13.096 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.042 segundos
+- Tempo necessário para predição do conjunto de validação: 0.048 segundos
 
 ### Treinando com 700 features
 
@@ -1446,9 +1446,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.94%
 - Desvio padrão da acurácia: 1.00%
-- Tempo necessário para treinamento: 18.293 segundos
+- Tempo necessário para treinamento: 14.529 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.071 segundos
+- Tempo necessário para predição do conjunto de validação: 0.051 segundos
 
 ### Treinando com 800 features
 
@@ -1469,9 +1469,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.07%
 - Desvio padrão da acurácia: 1.04%
-- Tempo necessário para treinamento: 18.063 segundos
+- Tempo necessário para treinamento: 14.521 segundos
 - Acurácia no conjunto de validação: 97.87%
-- Tempo necessário para predição do conjunto de validação: 0.044 segundos
+- Tempo necessário para predição do conjunto de validação: 0.076 segundos
 
 ### Treinando com 900 features
 
@@ -1492,9 +1492,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.07%
 - Desvio padrão da acurácia: 1.34%
-- Tempo necessário para treinamento: 18.961 segundos
+- Tempo necessário para treinamento: 15.628 segundos
 - Acurácia no conjunto de validação: 98.40%
-- Tempo necessário para predição do conjunto de validação: 0.065 segundos
+- Tempo necessário para predição do conjunto de validação: 0.069 segundos
 
 ### Treinando com 1000 features
 
@@ -1515,9 +1515,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 99.34%
 - Desvio padrão da acurácia: 0.89%
-- Tempo necessário para treinamento: 18.971 segundos
+- Tempo necessário para treinamento: 15.743 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.066 segundos
+- Tempo necessário para predição do conjunto de validação: 0.074 segundos
 
 ### Treinando com 10000 features (default)
 
@@ -1538,9 +1538,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.94%
 - Desvio padrão da acurácia: 0.99%
-- Tempo necessário para treinamento: 25.306 segundos
+- Tempo necessário para treinamento: 21.272 segundos
 - Acurácia no conjunto de validação: 98.94%
-- Tempo necessário para predição do conjunto de validação: 0.39 segundos
+- Tempo necessário para predição do conjunto de validação: 0.355 segundos
 
 ---
 
@@ -1565,9 +1565,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 94.54%
 - Desvio padrão da acurácia: 4.15%
-- Tempo necessário para treinamento: 7.692 segundos
+- Tempo necessário para treinamento: 6.656 segundos
 - Acurácia no conjunto de validação: 93.62%
-- Tempo necessário para predição do conjunto de validação: 0.01 segundos
+- Tempo necessário para predição do conjunto de validação: 0.009 segundos
 
 ### Treinando com 200 features
 
@@ -1588,9 +1588,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 96.68%
 - Desvio padrão da acurácia: 1.07%
-- Tempo necessário para treinamento: 8.956 segundos
+- Tempo necessário para treinamento: 7.584 segundos
 - Acurácia no conjunto de validação: 97.87%
-- Tempo necessário para predição do conjunto de validação: 0.016 segundos
+- Tempo necessário para predição do conjunto de validação: 0.015 segundos
 
 ### Treinando com 300 features
 
@@ -1611,9 +1611,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.07%
 - Desvio padrão da acurácia: 1.96%
-- Tempo necessário para treinamento: 10.682 segundos
+- Tempo necessário para treinamento: 9.244 segundos
 - Acurácia no conjunto de validação: 97.87%
-- Tempo necessário para predição do conjunto de validação: 0.031 segundos
+- Tempo necessário para predição do conjunto de validação: 0.017 segundos
 
 ### Treinando com 400 features
 
@@ -1634,9 +1634,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.00%
 - Desvio padrão da acurácia: 1.71%
-- Tempo necessário para treinamento: 12.528 segundos
+- Tempo necessário para treinamento: 10.547 segundos
 - Acurácia no conjunto de validação: 96.81%
-- Tempo necessário para predição do conjunto de validação: 0.025 segundos
+- Tempo necessário para predição do conjunto de validação: 0.024 segundos
 
 ### Treinando com 500 features
 
@@ -1657,9 +1657,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.60%
 - Desvio padrão da acurácia: 1.87%
-- Tempo necessário para treinamento: 13.315 segundos
+- Tempo necessário para treinamento: 10.868 segundos
 - Acurácia no conjunto de validação: 97.34%
-- Tempo necessário para predição do conjunto de validação: 0.029 segundos
+- Tempo necessário para predição do conjunto de validação: 0.039 segundos
 
 ### Treinando com 600 features
 
@@ -1680,9 +1680,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.87%
 - Desvio padrão da acurácia: 1.22%
-- Tempo necessário para treinamento: 21.067 segundos
+- Tempo necessário para treinamento: 13.036 segundos
 - Acurácia no conjunto de validação: 95.74%
-- Tempo necessário para predição do conjunto de validação: 0.115 segundos
+- Tempo necessário para predição do conjunto de validação: 0.048 segundos
 
 ### Treinando com 700 features
 
@@ -1703,9 +1703,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.74%
 - Desvio padrão da acurácia: 1.79%
-- Tempo necessário para treinamento: 21.538 segundos
+- Tempo necessário para treinamento: 14.703 segundos
 - Acurácia no conjunto de validação: 97.34%
-- Tempo necessário para predição do conjunto de validação: 0.047 segundos
+- Tempo necessário para predição do conjunto de validação: 0.068 segundos
 
 ### Treinando com 800 features
 
@@ -1726,9 +1726,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.01%
 - Desvio padrão da acurácia: 1.23%
-- Tempo necessário para treinamento: 18.02 segundos
+- Tempo necessário para treinamento: 14.565 segundos
 - Acurácia no conjunto de validação: 97.34%
-- Tempo necessário para predição do conjunto de validação: 0.049 segundos
+- Tempo necessário para predição do conjunto de validação: 0.054 segundos
 
 ### Treinando com 900 features
 
@@ -1749,9 +1749,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.01%
 - Desvio padrão da acurácia: 1.07%
-- Tempo necessário para treinamento: 21.509 segundos
+- Tempo necessário para treinamento: 15.749 segundos
 - Acurácia no conjunto de validação: 97.34%
-- Tempo necessário para predição do conjunto de validação: 0.048 segundos
+- Tempo necessário para predição do conjunto de validação: 0.066 segundos
 
 ### Treinando com 1000 features
 
@@ -1772,9 +1772,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.27%
 - Desvio padrão da acurácia: 1.69%
-- Tempo necessário para treinamento: 23.999 segundos
+- Tempo necessário para treinamento: 15.286 segundos
 - Acurácia no conjunto de validação: 96.81%
-- Tempo necessário para predição do conjunto de validação: 0.128 segundos
+- Tempo necessário para predição do conjunto de validação: 0.053 segundos
 
 ### Treinando com 10000 features (default)
 
@@ -1795,9 +1795,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 98.27%
 - Desvio padrão da acurácia: 1.04%
-- Tempo necessário para treinamento: 31.634 segundos
+- Tempo necessário para treinamento: 21.694 segundos
 - Acurácia no conjunto de validação: 98.40%
-- Tempo necessário para predição do conjunto de validação: 0.401 segundos
+- Tempo necessário para predição do conjunto de validação: 0.356 segundos
 
 ---
 
@@ -1822,9 +1822,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 92.55%
 - Desvio padrão da acurácia: 4.10%
-- Tempo necessário para treinamento: 8.907 segundos
+- Tempo necessário para treinamento: 6.608 segundos
 - Acurácia no conjunto de validação: 93.09%
-- Tempo necessário para predição do conjunto de validação: 0.013 segundos
+- Tempo necessário para predição do conjunto de validação: 0.009 segundos
 
 ### Treinando com 200 features
 
@@ -1845,9 +1845,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 95.61%
 - Desvio padrão da acurácia: 2.07%
-- Tempo necessário para treinamento: 10.877 segundos
+- Tempo necessário para treinamento: 7.693 segundos
 - Acurácia no conjunto de validação: 93.09%
-- Tempo necessário para predição do conjunto de validação: 0.061 segundos
+- Tempo necessário para predição do conjunto de validação: 0.013 segundos
 
 ### Treinando com 300 features
 
@@ -1868,9 +1868,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 96.81%
 - Desvio padrão da acurácia: 1.60%
-- Tempo necessário para treinamento: 11.983 segundos
+- Tempo necessário para treinamento: 9.179 segundos
 - Acurácia no conjunto de validação: 95.21%
-- Tempo necessário para predição do conjunto de validação: 0.038 segundos
+- Tempo necessário para predição do conjunto de validação: 0.02 segundos
 
 ### Treinando com 400 features
 
@@ -1891,9 +1891,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 96.54%
 - Desvio padrão da acurácia: 1.60%
-- Tempo necessário para treinamento: 15.673 segundos
+- Tempo necessário para treinamento: 10.611 segundos
 - Acurácia no conjunto de validação: 95.21%
-- Tempo necessário para predição do conjunto de validação: 0.038 segundos
+- Tempo necessário para predição do conjunto de validação: 0.023 segundos
 
 ### Treinando com 500 features
 
@@ -1914,9 +1914,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.74%
 - Desvio padrão da acurácia: 1.69%
-- Tempo necessário para treinamento: 16.205 segundos
+- Tempo necessário para treinamento: 10.994 segundos
 - Acurácia no conjunto de validação: 96.81%
-- Tempo necessário para predição do conjunto de validação: 0.037 segundos
+- Tempo necessário para predição do conjunto de validação: 0.04 segundos
 
 ### Treinando com 600 features
 
@@ -1937,9 +1937,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.47%
 - Desvio padrão da acurácia: 1.40%
-- Tempo necessário para treinamento: 20.856 segundos
+- Tempo necessário para treinamento: 13.046 segundos
 - Acurácia no conjunto de validação: 96.81%
-- Tempo necessário para predição do conjunto de validação: 0.041 segundos
+- Tempo necessário para predição do conjunto de validação: 0.045 segundos
 
 ### Treinando com 700 features
 
@@ -1960,7 +1960,7 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.34%
 - Desvio padrão da acurácia: 1.79%
-- Tempo necessário para treinamento: 23.038 segundos
+- Tempo necessário para treinamento: 14.352 segundos
 - Acurácia no conjunto de validação: 97.34%
 - Tempo necessário para predição do conjunto de validação: 0.052 segundos
 
@@ -1983,9 +1983,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.34%
 - Desvio padrão da acurácia: 1.89%
-- Tempo necessário para treinamento: 19.733 segundos
+- Tempo necessário para treinamento: 14.452 segundos
 - Acurácia no conjunto de validação: 97.87%
-- Tempo necessário para predição do conjunto de validação: 0.061 segundos
+- Tempo necessário para predição do conjunto de validação: 0.054 segundos
 
 ### Treinando com 900 features
 
@@ -2006,9 +2006,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.74%
 - Desvio padrão da acurácia: 1.20%
-- Tempo necessário para treinamento: 21.749 segundos
+- Tempo necessário para treinamento: 15.757 segundos
 - Acurácia no conjunto de validação: 97.87%
-- Tempo necessário para predição do conjunto de validação: 0.099 segundos
+- Tempo necessário para predição do conjunto de validação: 0.07 segundos
 
 ### Treinando com 1000 features
 
@@ -2029,9 +2029,9 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.61%
 - Desvio padrão da acurácia: 1.67%
-- Tempo necessário para treinamento: 22.006 segundos
+- Tempo necessário para treinamento: 15.448 segundos
 - Acurácia no conjunto de validação: 97.34%
-- Tempo necessário para predição do conjunto de validação: 0.062 segundos
+- Tempo necessário para predição do conjunto de validação: 0.072 segundos
 
 ### Treinando com 10000 features (default)
 
@@ -2052,6 +2052,6 @@ O resulto final obtido foi:
 
 - Média da acurácia: 97.87%
 - Desvio padrão da acurácia: 1.36%
-- Tempo necessário para treinamento: 28.869 segundos
+- Tempo necessário para treinamento: 21.533 segundos
 - Acurácia no conjunto de validação: 98.40%
-- Tempo necessário para predição do conjunto de validação: 0.394 segundos
+- Tempo necessário para predição do conjunto de validação: 0.357 segundos

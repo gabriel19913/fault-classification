@@ -159,14 +159,14 @@ def generate_title(cycle, model_name):
         title = f'{model_name.title()} e 1 ciclo pós falta'
     return title
 
-if __name__ == '__main__':
+def training_rf(signal_type):
     INPUT_DATA_PATH = '../input-data/'
 
     cycles = ['cycle_1', 'cycle_2', 'cycle_4', 'cycle_8', 'cycle_16', 'cycle_32', 'cycle_64',
               'cycle_128']
 
-    signal_type, model_name = 'i', 'random_forest'
-
+    model_name = 'random_forest'
+    print(f'# Treinamento do modelo usando RandomForest dataset1 sinal: {signal_type}')
     for cycle in cycles:
         print('\n---')
         c = cycle.split('_')[-1]
@@ -220,3 +220,6 @@ if __name__ == '__main__':
         y_pred, val_acc, val_time = validating(X_val_norm, y_val, model, model_name, signal_type, save=True)
         title = generate_title(cycle, model_name)
         generate_confusion_matrix(y_val, y_pred, 'figs_cm_rf/', f'{signal_type}_{cycle}_{model_name}', title=title)
+    print('*' * 100)
+# if __name__ == '__main__':
+    
