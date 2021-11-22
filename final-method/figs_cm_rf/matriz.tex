@@ -1,0 +1,23 @@
+\begin{table}[H]
+    \centering
+    \caption{Matriz de confusão para o modelo de florestas aleatórias no conjunto de validação.}
+    \label{cm_metodoA}
+    \begin{adjustbox}{width=0.8\columnwidth,center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{cccccccccccc}
+    \hline
+    \multicolumn{1}{l}{} & \multicolumn{11}{c}{\textbf{Valores preditos}} \\ \hline
+    \multirow{11}{*}{\rotatebox[origin=c]{90}{\textbf{Valores reais}}} &  & AB & ABC & ABT & AT & BC & BCT & BT & CA & CAT & CT \\ \cline{2-12} 
+     & AB & \begin{tabular}[c]{@{}c@{}}100\%\\ 19/19\end{tabular} &  &  &  &  &  &  &  &  &  \\ \cline{2-12} 
+     & ABC &  & \begin{tabular}[c]{@{}c@{}}100\%\\ 18/18\end{tabular} &  &  &  &  &  &  &  &  \\ \cline{2-12} 
+     & ABT &  &  & \begin{tabular}[c]{@{}c@{}}100\%\\ 19/19\end{tabular} &  &  &  & \begin{tabular}[c]{@{}c@{}}14.3\%\\ 1/7\end{tabular} &  &  &  \\ \cline{2-12} 
+     & AT &  &  &  & \begin{tabular}[c]{@{}c@{}}100\%\\ 19/19\end{tabular} &  &  &  &  & \begin{tabular}[c]{@{}c@{}}15.4\%\\ 2/13\end{tabular} & \begin{tabular}[c]{@{}c@{}}7.7\%\\ 1/13\end{tabular} \\ \cline{2-12} 
+     & BC &  &  &  &  & \begin{tabular}[c]{@{}c@{}}100\%\\ 19/19\end{tabular} &  &  &  &  &  \\ \cline{2-12} 
+     & BCT & \begin{tabular}[c]{@{}c@{}}8.3\%\\ 1/12\end{tabular} &  &  &  &  & \begin{tabular}[c]{@{}c@{}}100\%\\ 19/19\end{tabular} &  &  &  &  \\ \cline{2-12} 
+     & BT &  & \begin{tabular}[c]{@{}c@{}}11.1\%\\ 1/9\end{tabular} & \begin{tabular}[c]{@{}c@{}}11.1\%\\ 1/9\end{tabular} &  &  &  & \begin{tabular}[c]{@{}c@{}}77.8\%\\ 7/9\end{tabular} &  &  &  \\ \cline{2-12} 
+     & CA &  &  &  &  &  &  &  & \begin{tabular}[c]{@{}c@{}}100\%\\ 19/19\end{tabular} &  &  \\ \cline{2-12} 
+     & CAT & \begin{tabular}[c]{@{}c@{}}7.7\%\\ 1/13\end{tabular} &  &  &  &  &  &  &  & \begin{tabular}[c]{@{}c@{}}94.44\%\\ 17/18\end{tabular} &  \\ \cline{2-12} 
+     & CT &  &  &  &  &  &  &  &  &  & \begin{tabular}[c]{@{}c@{}}100\%\\ 19/19\end{tabular} \\ \hline
+    \end{tabular}
+    \end{adjustbox}
+    \end{table}

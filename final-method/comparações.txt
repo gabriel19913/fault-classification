@@ -1,0 +1,83 @@
+
+Método B
+Tempo operacional tipo do sinal v cycle_1 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta AB com 0.134s.
+O tipo de falta com menor tempo operacional foi a falta BC com 0.066s.
+
+Tempo operacional tipo do sinal v cycle_2 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta BCT com 0.043s.
+O tipo de falta com menor tempo operacional foi a falta CAT com 0.042s.
+
+Tempo operacional tipo do sinal v cycle_4 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta CAT com 0.038s.
+O tipo de falta com menor tempo operacional foi a falta ABT com 0.038s.
+
+Tempo operacional tipo do sinal v cycle_8 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta AB com 0.026s.
+O tipo de falta com menor tempo operacional foi a falta CT com 0.025s.
+
+Tempo operacional tipo do sinal v cycle_16 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta CAT com 0.029s.
+O tipo de falta com menor tempo operacional foi a falta AT com 0.028s.
+
+Tempo operacional tipo do sinal v cycle_32 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta BT com 0.024s.
+O tipo de falta com menor tempo operacional foi a falta AB com 0.024s.
+
+Tempo operacional tipo do sinal v cycle_64 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta ABC com 0.024s.
+O tipo de falta com menor tempo operacional foi a falta CA com 0.024s.
+
+Tempo operacional tipo do sinal v cycle_128 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta AB com 0.026s.
+O tipo de falta com menor tempo operacional foi a falta BCT com 0.026s.
+
+====================
+Método D
+Tempo operacional tipo do sinal i cycle_1 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta CAT com 0.070s.
+O tipo de falta com menor tempo operacional foi a falta AT com 0.069s.
+
+Tempo operacional tipo do sinal i cycle_2 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta CT com 0.046s.
+O tipo de falta com menor tempo operacional foi a falta ABC com 0.045s.
+
+Tempo operacional tipo do sinal i cycle_4 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta CA com 0.030s.
+O tipo de falta com menor tempo operacional foi a falta ABC com 0.030s.
+
+Tempo operacional tipo do sinal i cycle_8 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta AB com 0.026s.
+O tipo de falta com menor tempo operacional foi a falta BT com 0.025s.
+
+Tempo operacional tipo do sinal i cycle_16 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta CAT com 0.020s.
+O tipo de falta com menor tempo operacional foi a falta ABT com 0.020s.
+
+Tempo operacional tipo do sinal i cycle_32 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta CT com 0.022s.
+O tipo de falta com menor tempo operacional foi a falta CAT com 0.022s.
+
+Tempo operacional tipo do sinal i cycle_64 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta BCT com 0.019s.
+O tipo de falta com menor tempo operacional foi a falta AT com 0.019s.
+
+Tempo operacional tipo do sinal i cycle_128 - Random Forest
+Tipos de faltas que levaram maior e menor tempo para serem classificadas, considerando\hyph se pré\hyph processamento e classificação com os modelos previamente treinados:
+O tipo de falta com maior tempo operacional foi a falta AB com 0.027s.
+O tipo de falta com menor tempo operacional foi a falta BCT com 0.027s.

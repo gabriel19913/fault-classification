@@ -1,0 +1,44 @@
+METODO F
+
+Rocket
+1 ciclo: 300 kernels
+1/2 ciclo: 400 kernels
+1/4 ciclo: 400 kernels
+1/8 ciclo: 500 kernels
+1/16 ciclo: 900 kernels
+1/32 ciclo: 1000 kernels
+1/64 ciclo: 900 kernels
+1/128 ciclo: 600 kernels
+
+MiniRocket
+1 ciclo: 100 features
+1/2 ciclo: 300 features
+1/4 ciclo: 400 features
+1/8 ciclo: 400 features
+1/16 ciclo: 300 features
+1/32 ciclo: 500 features
+1/64 ciclo: 300 features
+1/128 ciclo: 800 features
+
+
+METODO G
+
+Rocket
+1 ciclo: 200 kernels
+1/2 ciclo: 400 kernels
+1/4 ciclo: 500 kernels
+1/8 ciclo: 500 kernels
+1/16 ciclo: 800 kernels
+1/32 ciclo: 800 kernels
+1/64 ciclo: 700 kernels
+1/128 ciclo: 1000 kernels
+
+MiniRocket
+1 ciclo: 500 features
+1/2 ciclo: 500 features
+1/4 ciclo: 500 features
+1/8 ciclo: 900 features
+1/16 ciclo: 700 features
+1/32 ciclo: 600 features
+1/64 ciclo: 600 features
+1/128 ciclo: 500 features
